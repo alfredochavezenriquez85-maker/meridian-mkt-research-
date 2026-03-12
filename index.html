@@ -15,422 +15,292 @@
       --graphite: #475569;
       --silver: #CBD5E1;
       --teal: #0F766E;
-      --teal-light: rgba(15, 118, 110, 0.08);
-      --teal-border: rgba(15, 118, 110, 0.2);
+      --teal-light: rgba(15, 118, 110, 0.06);
+      --teal-border: rgba(15, 118, 110, 0.18);
+      --blue: #2563EB;
+      --amber: #B45309;
+      --red: #DC2626;
+      --green: #059669;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--slate);
       background: var(--ivory);
-      font-size: 15px;
-      line-height: 1.7;
+      font-size: 17px;
+      line-height: 1.75;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Navigation ── */
+    /* ── Nav ── */
     nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: var(--navy);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(15, 23, 42, 0.97);
       backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
     }
-
     .nav-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 56px;
+      max-width: 1280px; margin: 0 auto; padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between; height: 58px;
     }
-
     .nav-brand {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: #fff;
-      letter-spacing: -0.01em;
+      font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1rem; color: #fff;
     }
-
     .nav-brand span { color: var(--teal); }
-
-    .nav-links {
-      display: flex;
-      gap: 0.25rem;
-      list-style: none;
-    }
-
+    .nav-links { display: flex; gap: 0.15rem; list-style: none; }
     .nav-links a {
-      color: var(--silver);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 500;
-      padding: 0.4rem 0.75rem;
-      border-radius: 6px;
-      transition: all 0.2s;
+      color: var(--silver); text-decoration: none; font-size: 0.82rem; font-weight: 500;
+      padding: 0.45rem 0.8rem; border-radius: 6px; transition: all 0.2s;
     }
-
-    .nav-links a:hover {
-      color: #fff;
-      background: rgba(255,255,255,0.06);
-    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.07); }
 
     /* ── Hero ── */
     .hero {
       background: var(--navy);
-      padding: 8rem 2rem 4.5rem;
-      text-align: left;
+      padding: 8.5rem 2rem 5rem;
     }
-
-    .hero-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
+    .hero-inner { max-width: 1280px; margin: 0 auto; }
     .hero-eyebrow {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 600;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--teal);
-      margin-bottom: 1.25rem;
+      font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.8rem;
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--teal); margin-bottom: 1.5rem;
     }
-
     .hero h1 {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      color: #fff;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      max-width: 720px;
+      font-family: 'Manrope', sans-serif; font-weight: 800;
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      color: #fff; line-height: 1.12; letter-spacing: -0.025em; max-width: 780px;
     }
-
     .hero-sub {
-      color: var(--silver);
-      font-size: 1.05rem;
-      margin-top: 1.5rem;
-      max-width: 600px;
-      line-height: 1.65;
+      color: var(--silver); font-size: 1.15rem; margin-top: 1.75rem; max-width: 640px; line-height: 1.7;
     }
-
     .hero-meta {
-      margin-top: 2.5rem;
-      display: flex;
-      gap: 2.5rem;
-      flex-wrap: wrap;
+      margin-top: 3rem; display: flex; gap: 3rem; flex-wrap: wrap;
     }
-
-    .hero-meta-item {
-      color: rgba(255,255,255,0.5);
-      font-size: 0.78rem;
-      font-weight: 500;
-    }
-
-    .hero-meta-item strong {
-      color: rgba(255,255,255,0.85);
-      display: block;
-      margin-bottom: 0.15rem;
-    }
+    .hero-meta-item { color: rgba(255,255,255,0.45); font-size: 0.82rem; font-weight: 500; }
+    .hero-meta-item strong { color: rgba(255,255,255,0.85); display: block; margin-bottom: 0.15rem; }
 
     /* ── KPI Strip ── */
-    .kpi-strip {
-      background: var(--slate);
-      border-top: 1px solid rgba(255,255,255,0.04);
-    }
-
+    .kpi-strip { background: var(--slate); border-top: 1px solid rgba(255,255,255,0.04); }
     .kpi-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 2rem;
+      max-width: 1280px; margin: 0 auto; padding: 2.75rem 2rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 2rem;
     }
-
-    .kpi {
-      text-align: center;
-    }
-
+    .kpi { text-align: center; }
     .kpi-value {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      font-size: 1.75rem;
-      color: #fff;
-      letter-spacing: -0.02em;
+      font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 2rem;
+      color: #fff; letter-spacing: -0.02em;
     }
-
     .kpi-value .accent { color: var(--teal); }
+    .kpi-label { font-size: 0.82rem; color: var(--silver); margin-top: 0.4rem; font-weight: 500; }
 
-    .kpi-label {
-      font-size: 0.75rem;
-      color: var(--silver);
-      margin-top: 0.35rem;
-      font-weight: 500;
-    }
+    /* ── Content Container ── */
+    .content { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
 
-    /* ── Content ── */
-    .content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    .section {
-      padding: 4rem 0;
-      border-bottom: 1px solid var(--silver);
-    }
-
+    /* ── Sections ── */
+    .section { padding: 4.5rem 0; border-bottom: 1px solid #E2E8F0; }
     .section:last-child { border-bottom: none; }
-
     .section-label {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 600;
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--teal);
-      margin-bottom: 0.75rem;
+      font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.75rem;
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--teal); margin-bottom: 0.75rem;
     }
-
     h2 {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: 1.65rem;
-      color: var(--navy);
-      letter-spacing: -0.02em;
-      margin-bottom: 1.25rem;
-      line-height: 1.25;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      font-size: 1.85rem; color: var(--navy); letter-spacing: -0.02em; margin-bottom: 1.25rem; line-height: 1.25;
     }
-
     h3 {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--navy);
-      letter-spacing: -0.01em;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      font-size: 1.2rem; color: var(--navy); letter-spacing: -0.01em;
+      margin-top: 2.5rem; margin-bottom: 0.85rem;
     }
-
-    p {
-      color: var(--graphite);
-      margin-bottom: 1rem;
-      max-width: 760px;
+    h4 {
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      font-size: 1.05rem; color: var(--navy); margin-top: 2rem; margin-bottom: 0.6rem;
     }
-
+    p { color: var(--graphite); margin-bottom: 1.1rem; max-width: 820px; }
     strong { color: var(--slate); font-weight: 600; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1.1rem; color: var(--graphite); }
+    li { margin-bottom: 0.45rem; }
+
+    /* ── Part Header (dark bands) ── */
+    .part-header {
+      background: var(--navy); padding: 3.5rem 2.5rem; margin: 0 -2rem; border-radius: 0;
+    }
+    .part-header h2 { color: #fff; margin-bottom: 0.6rem; }
+    .part-header p { color: var(--silver); font-size: 1rem; }
 
     /* ── Tables ── */
     .table-wrap {
-      overflow-x: auto;
-      margin: 1.25rem 0 1.5rem;
-      border-radius: 8px;
-      border: 1px solid #E2E8F0;
+      overflow-x: auto; margin: 1.5rem 0 1.75rem; border-radius: 10px; border: 1px solid #E2E8F0;
     }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.85rem;
-    }
-
-    thead {
-      background: var(--navy);
-    }
-
+    table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+    thead { background: var(--navy); }
     th {
-      color: #fff;
-      font-weight: 600;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 0.75rem 1rem;
-      text-align: left;
-      white-space: nowrap;
+      color: #fff; font-weight: 600; font-size: 0.78rem; text-transform: uppercase;
+      letter-spacing: 0.06em; padding: 0.85rem 1.1rem; text-align: left; white-space: nowrap;
     }
-
-    td {
-      padding: 0.65rem 1rem;
-      border-top: 1px solid #E2E8F0;
-      color: var(--graphite);
-    }
-
+    td { padding: 0.75rem 1.1rem; border-top: 1px solid #E2E8F0; color: var(--graphite); }
     tbody tr:hover { background: var(--teal-light); }
-
     td:first-child { font-weight: 500; color: var(--slate); }
-
     .highlight-row { background: var(--teal-light); }
 
-    /* ── Cards / Grid ── */
+    /* ── Cards ── */
     .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-      margin: 1.5rem 0;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem; margin: 1.75rem 0;
     }
-
     .card {
-      background: #fff;
-      border: 1px solid #E2E8F0;
-      border-radius: 10px;
-      padding: 1.5rem;
-      transition: box-shadow 0.2s;
+      background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+      padding: 1.75rem; transition: box-shadow 0.2s;
     }
-
-    .card:hover {
-      box-shadow: 0 4px 24px rgba(15, 23, 42, 0.06);
-    }
-
+    .card:hover { box-shadow: 0 6px 32px rgba(15, 23, 42, 0.06); }
     .card-title {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--navy);
-      margin-bottom: 0.5rem;
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      font-size: 1.05rem; color: var(--navy); margin-bottom: 0.6rem;
     }
-
-    .card p {
-      font-size: 0.85rem;
-      color: var(--graphite);
-      margin-bottom: 0;
-    }
-
+    .card p { font-size: 0.92rem; color: var(--graphite); margin-bottom: 0; }
     .card-tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      margin-bottom: 0.75rem;
+      display: inline-block; font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.06em; padding: 0.22rem 0.55rem; border-radius: 4px; margin-bottom: 0.85rem;
     }
-
     .tag-maduro { background: rgba(15, 118, 110, 0.1); color: var(--teal); }
-    .tag-desarrollo { background: rgba(37, 99, 235, 0.1); color: #2563EB; }
-    .tag-emergente { background: rgba(245, 158, 11, 0.1); color: #B45309; }
+    .tag-desarrollo { background: rgba(37, 99, 235, 0.1); color: var(--blue); }
+    .tag-emergente { background: rgba(245, 158, 11, 0.1); color: var(--amber); }
 
-    /* ── Gap Analysis badges ── */
+    /* ── Badges ── */
     .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      font-size: 0.82rem; font-weight: 600; padding: 0.22rem 0.65rem; border-radius: 4px;
     }
-
-    .badge-ok { background: rgba(16, 185, 129, 0.1); color: #059669; }
-    .badge-warn { background: rgba(245, 158, 11, 0.1); color: #B45309; }
-    .badge-no { background: rgba(239, 68, 68, 0.1); color: #DC2626; }
+    .badge-ok { background: rgba(16, 185, 129, 0.1); color: var(--green); }
+    .badge-warn { background: rgba(245, 158, 11, 0.1); color: var(--amber); }
+    .badge-no { background: rgba(239, 68, 68, 0.1); color: var(--red); }
 
     /* ── Callout ── */
     .callout {
-      background: var(--teal-light);
-      border-left: 3px solid var(--teal);
-      padding: 1.25rem 1.5rem;
-      border-radius: 0 8px 8px 0;
-      margin: 1.5rem 0;
+      background: var(--teal-light); border-left: 3px solid var(--teal);
+      padding: 1.4rem 1.75rem; border-radius: 0 10px 10px 0; margin: 1.75rem 0;
+    }
+    .callout p { color: var(--slate); margin-bottom: 0; font-size: 0.95rem; }
+
+    /* ── Glossary inline ── */
+    .glossary {
+      font-size: 0.85rem; color: var(--graphite); font-style: italic; margin-bottom: 1.25rem;
     }
 
-    .callout p {
-      color: var(--slate);
-      margin-bottom: 0;
-      font-size: 0.9rem;
+    /* ── Chart containers ── */
+    .chart-container {
+      background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+      padding: 2rem; margin: 1.75rem 0;
+    }
+    .chart-title {
+      font-family: 'Manrope', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin-bottom: 1.25rem;
     }
 
-    /* ── List ── */
-    ul, ol {
-      padding-left: 1.5rem;
-      margin-bottom: 1rem;
-      color: var(--graphite);
-    }
+    /* ── Bar chart CSS ── */
+    .bar-chart { display: flex; flex-direction: column; gap: 0.7rem; }
+    .bar-row { display: flex; align-items: center; gap: 0.75rem; }
+    .bar-label { width: 140px; font-size: 0.85rem; font-weight: 500; color: var(--slate); text-align: right; flex-shrink: 0; }
+    .bar-track { flex: 1; height: 32px; background: #F1F5F9; border-radius: 6px; overflow: hidden; position: relative; }
+    .bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 0.75rem; transition: width 0.8s ease; }
+    .bar-fill span { font-size: 0.78rem; font-weight: 700; color: #fff; white-space: nowrap; }
+    .bar-fill.navy { background: var(--navy); }
+    .bar-fill.teal { background: var(--teal); }
+    .bar-fill.blue { background: var(--blue); }
+    .bar-fill.slate { background: var(--graphite); }
+    .bar-fill.amber { background: var(--amber); }
 
-    li { margin-bottom: 0.4rem; }
-
-    /* ── Divider line ── */
-    .divider {
-      border: none;
-      border-top: 1px solid var(--silver);
-      margin: 3rem 0;
+    /* ── Donut chart SVG ── */
+    .donut-wrap {
+      display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; justify-content: center;
     }
+    .donut-legend { display: flex; flex-direction: column; gap: 0.6rem; }
+    .legend-item { display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; color: var(--graphite); }
+    .legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
 
-    /* ── Part header ── */
-    .part-header {
-      background: var(--navy);
-      padding: 3rem 2rem;
-      margin: 0 -2rem;
-      border-radius: 0;
+    /* ── Maturity grid ── */
+    .maturity-grid {
+      display: grid; grid-template-columns: 180px repeat(4, 1fr);
+      gap: 1px; background: #E2E8F0; border-radius: 10px; overflow: hidden; margin: 1.5rem 0;
     }
+    .maturity-grid .cell {
+      background: #fff; padding: 0.65rem 0.85rem; font-size: 0.85rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .maturity-grid .cell.header {
+      background: var(--navy); color: #fff; font-weight: 600; font-size: 0.75rem;
+      text-transform: uppercase; letter-spacing: 0.05em;
+    }
+    .maturity-grid .cell.row-label {
+      background: #F8FAFC; font-weight: 500; color: var(--slate); justify-content: flex-start;
+    }
+    .maturity-grid .cell .dot {
+      width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; font-size: 0.7rem; font-weight: 700; color: #fff;
+    }
+    .dot-e { background: #F59E0B; }
+    .dot-d { background: var(--blue); }
+    .dot-m { background: var(--teal); }
 
-    .part-header h2 {
-      color: #fff;
-      margin-bottom: 0.5rem;
+    /* ── Playbook steps ── */
+    .playbook-step {
+      background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+      padding: 2rem; margin-bottom: 1.25rem; border-left: 4px solid var(--teal);
     }
+    .playbook-step .step-num {
+      font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 2rem;
+      color: var(--teal); opacity: 0.3; float: right; margin-top: -0.5rem;
+    }
+    .playbook-step h4 { margin-top: 0; }
+    .playbook-step .meta {
+      display: flex; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap;
+    }
+    .playbook-step .meta-item {
+      font-size: 0.82rem; color: var(--graphite);
+    }
+    .playbook-step .meta-item strong { color: var(--slate); }
 
-    .part-header p {
-      color: var(--silver);
-      font-size: 0.9rem;
+    /* ── Two-col ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1.75rem 0; }
+
+    /* ── RC sub-line detail block ── */
+    .rc-block {
+      background: #fff; border: 1px solid #E2E8F0; border-radius: 12px;
+      padding: 2.25rem; margin: 1.75rem 0;
     }
+    .rc-block h3 { margin-top: 0; }
+    .rc-block .rc-meta {
+      display: flex; gap: 1.5rem; margin-bottom: 1.25rem; flex-wrap: wrap;
+    }
+    .rc-block .rc-meta-item {
+      background: #F1F5F9; padding: 0.5rem 1rem; border-radius: 8px; font-size: 0.85rem;
+    }
+    .rc-block .rc-meta-item strong { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--graphite); margin-bottom: 0.15rem; }
+    .rc-block .rc-meta-item span { font-weight: 600; color: var(--navy); }
 
     /* ── Footer ── */
     footer {
-      background: var(--navy);
-      padding: 3rem 2rem;
-      text-align: center;
-      margin-top: 2rem;
+      background: var(--navy); padding: 3.5rem 2rem; text-align: center; margin-top: 2rem;
     }
-
-    .footer-brand {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      color: #fff;
-      font-size: 1rem;
-    }
-
+    .footer-brand { font-family: 'Manrope', sans-serif; font-weight: 700; color: #fff; font-size: 1.05rem; }
     .footer-brand span { color: var(--teal); }
-
-    .footer-sub {
-      color: var(--silver);
-      font-size: 0.78rem;
-      margin-top: 0.5rem;
-    }
-
-    /* ── Two-column layout ── */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 1.5rem 0;
-    }
+    .footer-sub { color: var(--silver); font-size: 0.82rem; margin-top: 0.5rem; }
 
     /* ── Responsive ── */
     @media (max-width: 768px) {
       .nav-links { display: none; }
-      .hero { padding: 6rem 1.25rem 3rem; }
-      .hero-meta { gap: 1.5rem; }
-      .kpi-inner { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+      .hero { padding: 6.5rem 1.25rem 3.5rem; }
       .content { padding: 0 1.25rem; }
-      .section { padding: 2.5rem 0; }
+      .section { padding: 3rem 0; }
       .two-col { grid-template-columns: 1fr; }
       .card-grid { grid-template-columns: 1fr; }
-      .part-header { margin: 0 -1.25rem; padding: 2rem 1.25rem; }
+      .part-header { margin: 0 -1.25rem; padding: 2.5rem 1.25rem; }
+      .maturity-grid { grid-template-columns: 120px repeat(4, 1fr); font-size: 0.78rem; }
+      .bar-label { width: 100px; font-size: 0.78rem; }
+      .donut-wrap { flex-direction: column; }
     }
-
-    /* ── Print ── */
     @media print {
       nav { display: none; }
       .hero { padding-top: 2rem; }
@@ -440,512 +310,680 @@
 </head>
 <body>
 
-<!-- Navigation -->
+<!-- ═══ Navigation ═══ -->
 <nav>
   <div class="nav-inner">
     <div class="nav-brand">Meridian<span>.</span> Consulting</div>
     <ul class="nav-links">
       <li><a href="#macro">Panorama Macro</a></li>
-      <li><a href="#rc">Responsabilidad Civil</a></li>
       <li><a href="#ramos">Ramos</a></li>
+      <li><a href="#danos">Da&ntilde;os</a></li>
+      <li><a href="#rc">Responsabilidad Civil</a></li>
       <li><a href="#gap">Gap Analysis</a></li>
-      <li><a href="#recomendaciones">Recomendaciones</a></li>
+      <li><a href="#playbook">Playbook Sura</a></li>
     </ul>
   </div>
 </nav>
 
-<!-- Hero -->
+<!-- ═══ Hero ═══ -->
 <header class="hero">
   <div class="hero-inner">
     <div class="hero-eyebrow">Market Intelligence</div>
     <h1>Estudio de Mercado<br>Sector Asegurador M&eacute;xico</h1>
-    <p class="hero-sub">An&aacute;lisis estrat&eacute;gico del mercado asegurador mexicano con enfoque en Da&ntilde;os, Responsabilidad Civil y evaluaci&oacute;n competitiva de Sura.</p>
+    <p class="hero-sub">An&aacute;lisis del mercado asegurador mexicano &mdash; de lo macro a lo espec&iacute;fico &mdash; con foco en Da&ntilde;os, Responsabilidad Civil y un playbook accionable para Sura.</p>
     <div class="hero-meta">
-      <div class="hero-meta-item">
-        <strong>Fecha</strong>Marzo 2026
-      </div>
-      <div class="hero-meta-item">
-        <strong>Cliente</strong>Liderazgo de Operaciones &mdash; LCG
-      </div>
-      <div class="hero-meta-item">
-        <strong>Versi&oacute;n</strong>1.0
-      </div>
-      <div class="hero-meta-item">
-        <strong>Fuentes</strong>72+ documentadas
-      </div>
+      <div class="hero-meta-item"><strong>Fecha</strong>Marzo 2026</div>
+      <div class="hero-meta-item"><strong>Cliente</strong>Liderazgo de Operaciones &mdash; LCG</div>
+      <div class="hero-meta-item"><strong>Versi&oacute;n</strong>1.0</div>
+      <div class="hero-meta-item"><strong>Fuentes</strong>72+ documentadas</div>
     </div>
   </div>
 </header>
 
-<!-- KPI Strip -->
+<!-- ═══ KPI Strip ═══ -->
 <div class="kpi-strip">
   <div class="kpi-inner">
-    <div class="kpi">
-      <div class="kpi-value">$936<span class="accent">B</span></div>
-      <div class="kpi-label">Prima directa MXN (2024)</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-value"><span class="accent">+</span>17%</div>
-      <div class="kpi-label">Crecimiento real YoY</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-value">113</div>
-      <div class="kpi-label">Instituciones activas</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-value">2.4<span class="accent">%</span></div>
-      <div class="kpi-label">Penetraci&oacute;n / PIB</div>
-    </div>
-    <div class="kpi">
-      <div class="kpi-value">9</div>
-      <div class="kpi-label">Subramos RC analizados</div>
-    </div>
+    <div class="kpi"><div class="kpi-value">$936<span class="accent">B</span></div><div class="kpi-label">Prima directa MXN (2024)</div></div>
+    <div class="kpi"><div class="kpi-value"><span class="accent">+</span>17%</div><div class="kpi-label">Crecimiento real YoY</div></div>
+    <div class="kpi"><div class="kpi-value">113</div><div class="kpi-label">Instituciones activas</div></div>
+    <div class="kpi"><div class="kpi-value">2.4<span class="accent">%</span></div><div class="kpi-label">Penetraci&oacute;n / PIB</div></div>
+    <div class="kpi"><div class="kpi-value">9</div><div class="kpi-label">Subramos RC analizados</div></div>
   </div>
 </div>
 
-<!-- Main Content -->
 <div class="content">
 
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- PARTE I — Panorama Macro -->
-  <!-- ═══════════════════════════════════════════════ -->
-  <section class="section" id="macro">
-    <div class="part-header">
-      <div class="section-label">Parte I</div>
-      <h2>Panorama Macro del Sector Asegurador Mexicano</h2>
-      <p>Dimensi&oacute;n, estructura, competidores y tendencias del mercado.</p>
+<!-- ════════════════════════════════════════ -->
+<!-- PARTE I — PANORAMA MACRO -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="macro">
+  <div class="part-header">
+    <div class="section-label">Parte I</div>
+    <h2>Panorama Macro del Sector Asegurador Mexicano</h2>
+    <p>Dimensi&oacute;n del mercado, estructura competitiva, canales y tendencias.</p>
+  </div>
+
+  <h3 style="margin-top:2.75rem">Dimensi&oacute;n del Mercado</h3>
+  <p>El sector asegurador mexicano cerr&oacute; 2024 con <strong>primas directas superiores a $936,000 millones de pesos</strong>, un crecimiento real del <strong>17%</strong>, y 113 instituciones activas. Sin embargo, las utilidades cayeron por mayor siniestralidad &mdash; se vende m&aacute;s que nunca pero se gana menos.</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Indicador</th><th>Valor</th><th>Fuente</th></tr></thead>
+      <tbody>
+        <tr><td>Prima directa total (2024)</td><td><strong>&gt;$936,000 M MXN</strong></td><td>CNSF 4T 2024</td></tr>
+        <tr><td>Prima total incl. reaseguro</td><td>$1,076,000 M MXN</td><td>CNSF 2025</td></tr>
+        <tr><td>Crecimiento real YoY</td><td><strong>+17%</strong></td><td>CNSF 4T 2024</td></tr>
+        <tr><td>Prima 1T 2025</td><td>$290,900 M MXN (+12.3%)</td><td>Revista Siniestro</td></tr>
+        <tr><td>Siniestros pagados (2024)</td><td>$552,000 M MXN</td><td>AMIS</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Distribuci&oacute;n por Ramo</h3>
+
+  <!-- Donut Chart -->
+  <div class="chart-container">
+    <div class="chart-title">Composici&oacute;n del mercado por operaci&oacute;n (2024)</div>
+    <div class="donut-wrap">
+      <svg width="220" height="220" viewBox="0 0 220 220">
+        <circle cx="110" cy="110" r="85" fill="none" stroke="#E2E8F0" stroke-width="32"/>
+        <!-- Vida 41.3% = 41.3% of 360 = 148.68deg -->
+        <circle cx="110" cy="110" r="85" fill="none" stroke="#0F172A" stroke-width="32"
+          stroke-dasharray="220.4 533.8" stroke-dashoffset="0" transform="rotate(-90 110 110)"/>
+        <!-- Autos 21.3% = 113.8 -->
+        <circle cx="110" cy="110" r="85" fill="none" stroke="#0F766E" stroke-width="32"
+          stroke-dasharray="113.8 640.4" stroke-dashoffset="-220.4" transform="rotate(-90 110 110)"/>
+        <!-- A&E 18.7% = 99.9 -->
+        <circle cx="110" cy="110" r="85" fill="none" stroke="#2563EB" stroke-width="32"
+          stroke-dasharray="99.9 654.3" stroke-dashoffset="-334.2" transform="rotate(-90 110 110)"/>
+        <!-- Daños 14.5% = 77.5 -->
+        <circle cx="110" cy="110" r="85" fill="none" stroke="#475569" stroke-width="32"
+          stroke-dasharray="77.5 676.7" stroke-dashoffset="-434.1" transform="rotate(-90 110 110)"/>
+        <!-- Pensiones 4.2% = 22.4 -->
+        <circle cx="110" cy="110" r="85" fill="none" stroke="#CBD5E1" stroke-width="32"
+          stroke-dasharray="22.4 731.8" stroke-dashoffset="-511.6" transform="rotate(-90 110 110)"/>
+        <text x="110" y="105" text-anchor="middle" font-family="Manrope" font-weight="800" font-size="20" fill="#0F172A">$936B</text>
+        <text x="110" y="125" text-anchor="middle" font-family="Inter" font-size="11" fill="#475569">MXN</text>
+      </svg>
+      <div class="donut-legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#0F172A"></div><strong>Vida</strong>&nbsp;&mdash; $375,511 M &mdash; 41.3%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#0F766E"></div><strong>Autos</strong>&nbsp;&mdash; $193,217 M &mdash; 21.3%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#2563EB"></div><strong>A&amp;E / GMM</strong>&nbsp;&mdash; $169,654 M &mdash; 18.7%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#475569"></div><strong>Da&ntilde;os sin Autos</strong>&nbsp;&mdash; $131,819 M &mdash; 14.5%</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#CBD5E1"></div>Pensiones &mdash; $38,588 M &mdash; 4.2%</div>
+      </div>
     </div>
+  </div>
 
-    <h3 style="margin-top:2.5rem">Dimensi&oacute;n del Mercado</h3>
-    <p>El sector asegurador mexicano se consolid&oacute; en 2024 como una industria de escala significativa, con <strong>primas directas superiores a $936,000 millones de pesos</strong>, un crecimiento real del <strong>17% respecto a 2023</strong>. Para el 1T 2025, el crecimiento se mantuvo en <strong>12.3%</strong>.</p>
+  <h3>Top 5 Aseguradoras</h3>
+  <div class="chart-container">
+    <div class="chart-title">Participaci&oacute;n de mercado &mdash; Top 5 (1T 2024)</div>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">GNP</div><div class="bar-track"><div class="bar-fill navy" style="width:62%"><span>12.49%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">MetLife</div><div class="bar-track"><div class="bar-fill teal" style="width:54%"><span>10.84%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">BBVA Seguros</div><div class="bar-track"><div class="bar-fill blue" style="width:49%"><span>9.75%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Banorte</div><div class="bar-track"><div class="bar-fill slate" style="width:39%"><span>7.80%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">AXA</div><div class="bar-track"><div class="bar-fill slate" style="width:36%"><span>7.21%</span></div></div></div>
+    </div>
+    <p style="font-size:0.82rem;color:var(--graphite);margin-top:0.75rem">Las &ldquo;5 grandes&rdquo; concentran <strong>~44.2%</strong> del primaje total. Bancaseguros impulsa a Banorte, Citibanamex y BBVA.</p>
+  </div>
 
+  <h3>Penetraci&oacute;n: M&eacute;xico vs. el mundo</h3>
+  <div class="chart-container">
+    <div class="chart-title">Primas como % del PIB</div>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">M&eacute;xico</div><div class="bar-track"><div class="bar-fill amber" style="width:26%"><span>2.4%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Prom. LATAM</div><div class="bar-track"><div class="bar-fill slate" style="width:32%"><span>3.0%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Chile</div><div class="bar-track"><div class="bar-fill blue" style="width:51%"><span>4.7%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Prom. OCDE</div><div class="bar-track"><div class="bar-fill navy" style="width:100%"><span>9.3%</span></div></div></div>
+    </div>
+    <p style="font-size:0.85rem;color:var(--graphite);margin-top:0.75rem">Esta brecha representa una <strong>oportunidad estructural de crecimiento</strong>, especialmente en l&iacute;neas especializadas de baja penetraci&oacute;n.</p>
+  </div>
+
+  <h3>Tendencias Macro</h3>
+  <div class="card-grid">
+    <div class="card"><div class="card-title">Nearshoring</div><p>La llegada de manufactura extranjera incrementa la demanda de RC General, RC Producto y RC Ambiental. <strong>Impacto: Alto.</strong></p></div>
+    <div class="card"><div class="card-title">Ciberseguridad</div><p>M&eacute;xico es el 2&deg; pa&iacute;s m&aacute;s atacado en LATAM (23% de incidentes). Ciberseguros crecen <strong>+30% anual</strong>.</p></div>
+    <div class="card"><div class="card-title">Regulaci&oacute;n ambiental</div><p>La Ley Federal de Responsabilidad Ambiental (LFRA, 2013) impulsa la demanda de RC Ambiental dedicada.</p></div>
+    <div class="card"><div class="card-title">Gobierno corporativo</div><p>Mayor exigencia en compliance impulsa seguros de Directores y Funcionarios (D&amp;O). <strong>Impacto: Alto.</strong></p></div>
+    <div class="card"><div class="card-title">Litigiosidad creciente</div><p>Aumento de demandas laborales (post-reforma outsourcing 2021) y de consumidores impulsa RC Patronal y Producto.</p></div>
+    <div class="card"><div class="card-title">Digitalizaci&oacute;n</div><p>Crecimiento del canal digital, especialmente en Autos y Vida. Bajo impacto en RC (requiere suscripci&oacute;n especializada).</p></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PARTE II — ANÁLISIS POR RAMO -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="ramos">
+  <div class="part-header">
+    <div class="section-label">Parte II</div>
+    <h2>An&aacute;lisis por Ramo</h2>
+    <p>Gastos M&eacute;dicos Mayores, Autos y Vida &mdash; l&iacute;deres, presiones y tendencias.</p>
+  </div>
+
+  <!-- GMM -->
+  <h3 style="margin-top:2.75rem">GMM &mdash; Gastos M&eacute;dicos Mayores</h3>
+  <p class="glossary">GMM = Gastos M&eacute;dicos Mayores. P&oacute;liza que cubre hospitalizaci&oacute;n, cirug&iacute;as, consultas m&eacute;dicas y medicamentos ante enfermedades o accidentes graves.</p>
+
+  <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));">
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">$169,654M</div><div class="kpi-label" style="color:var(--graphite)">Prima A&amp;E (2024)</div></div>
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">+13.8%</div><div class="kpi-label" style="color:var(--graphite)">Crecimiento YoY</div></div>
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">~14M</div><div class="kpi-label" style="color:var(--graphite)">Personas aseguradas</div></div>
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">10%</div><div class="kpi-label" style="color:var(--graphite)">Penetraci&oacute;n poblaci&oacute;n</div></div>
+  </div>
+
+  <div class="two-col">
     <div class="table-wrap">
       <table>
-        <thead>
-          <tr><th>Indicador</th><th>Valor</th><th>Fuente</th></tr>
-        </thead>
+        <thead><tr><th>Segmento</th><th>#1</th><th>#2</th><th>#3</th></tr></thead>
         <tbody>
-          <tr><td>Prima directa total (2024)</td><td><strong>&gt;$936,000 M MXN</strong></td><td>CNSF 4T 2024</td></tr>
-          <tr><td>Prima total incl. reaseguro (2024)</td><td>$1,076,000 M MXN</td><td>CNSF 2025</td></tr>
-          <tr><td>Crecimiento real YoY</td><td><strong>+17%</strong></td><td>CNSF 4T 2024</td></tr>
-          <tr><td>Instituciones activas</td><td>113</td><td>CNSF 2025</td></tr>
-          <tr><td>Siniestros pagados (2024)</td><td>$552,000 M MXN</td><td>AMIS, marzo 2025</td></tr>
+          <tr><td><strong>Individual</strong></td><td>GNP (29.7%)</td><td>AXA (22%)</td><td>MetLife (11%)</td></tr>
+          <tr><td><strong>Colectivo</strong></td><td>MetLife (24.7%)</td><td>GNP (23.9%)</td><td>AXA (16.2%)</td></tr>
         </tbody>
       </table>
     </div>
-
-    <h3>Penetraci&oacute;n vs. Mercados Comparables</h3>
     <div class="callout">
-      <p>M&eacute;xico mantiene una <strong>brecha significativa de penetraci&oacute;n</strong>: 2.4&ndash;3.2% del PIB vs. 9.3% promedio OCDE. Esta brecha representa una <strong>oportunidad sustancial de crecimiento</strong>, especialmente en RC, Cyber y l&iacute;neas especializadas.</p>
+      <p><strong>Presi&oacute;n cr&iacute;tica:</strong> Inflaci&oacute;n m&eacute;dica de <strong>14.9%</strong> (2025) vs. inflaci&oacute;n general 3.9%. Siniestralidad subi&oacute; de 70.8% a 74%. ~3 millones de personas podr&iacute;an cancelar su p&oacute;liza por costo en 2026.</p>
     </div>
+  </div>
+
+  <!-- Autos -->
+  <h3>Autos</h3>
+  <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));">
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">$193,217M</div><div class="kpi-label" style="color:var(--graphite)">Prima directa (2024)</div></div>
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">+26.3%</div><div class="kpi-label" style="color:var(--graphite)">Crecimiento YoY</div></div>
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">34.1%</div><div class="kpi-label" style="color:var(--graphite)">Qu&aacute;litas (l&iacute;der)</div></div>
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">94.9%</div><div class="kpi-label" style="color:var(--graphite)">&Iacute;ndice combinado</div></div>
+  </div>
+
+  <div class="chart-container">
+    <div class="chart-title">Top 5 aseguradoras de Autos por participaci&oacute;n</div>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">Qu&aacute;litas</div><div class="bar-track"><div class="bar-fill teal" style="width:100%"><span>34.1%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">AXA</div><div class="bar-track"><div class="bar-fill navy" style="width:33%"><span>~11%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">GNP</div><div class="bar-track"><div class="bar-fill blue" style="width:25%"><span>~8.5%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">HDI</div><div class="bar-track"><div class="bar-fill slate" style="width:22%"><span>~7.5%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Chubb</div><div class="bar-track"><div class="bar-fill slate" style="width:16%"><span>~5.5%</span></div></div></div>
+    </div>
+  </div>
+  <p><strong>Tendencias clave:</strong> Telem&aacute;tica / UBI (seguros basados en uso), autos el&eacute;ctricos (primas 15&ndash;30% m&aacute;s altas), RC obligatoria se expande a m&aacute;s estados, canal digital en aceleraci&oacute;n (Rastreator, miituo).</p>
+
+  <!-- Vida -->
+  <h3>Vida</h3>
+  <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));">
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">$375,511M</div><div class="kpi-label" style="color:var(--graphite)">Prima directa (2024)</div></div>
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">41.3%</div><div class="kpi-label" style="color:var(--graphite)">% del sector (mayor ramo)</div></div>
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">~58M</div><div class="kpi-label" style="color:var(--graphite)">P&oacute;lizas vigentes</div></div>
+    <div class="card" style="text-align:center"><div class="kpi-value" style="color:var(--navy);font-size:1.5rem">~40-45%</div><div class="kpi-label" style="color:var(--graphite)">V&iacute;a bancaseguros</div></div>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>#</th><th>Aseguradora</th><th>Market share</th><th>Canal dominante</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td><strong>MetLife</strong></td><td>~16&ndash;17%</td><td>Individual + grupal</td></tr>
+        <tr><td>2</td><td><strong>BBVA Seguros</strong></td><td>~14&ndash;15%</td><td>Bancaseguros</td></tr>
+        <tr><td>3</td><td><strong>GNP</strong></td><td>~10&ndash;11%</td><td>Individual premium</td></tr>
+        <tr><td>4</td><td><strong>Citibanamex</strong></td><td>~10%</td><td>Bancaseguros</td></tr>
+        <tr><td>5</td><td><strong>Banorte</strong></td><td>~8&ndash;9%</td><td>Bancaseguros</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>Tendencias:</strong> Seguros h&iacute;bridos (vida + ahorro + inversi&oacute;n), riders de enfermedades graves como est&aacute;ndar, suscripci&oacute;n digital sin examen m&eacute;dico, microseguros para mercado masivo.</p>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PARTE III — DAÑOS -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="danos">
+  <div class="part-header">
+    <div class="section-label">Parte III</div>
+    <h2>Da&ntilde;os (sin Autos) &mdash; $131,819 M MXN</h2>
+    <p>Ramo donde se ubica Responsabilidad Civil &mdash; el foco principal de este estudio.</p>
+  </div>
+
+  <h3 style="margin-top:2.75rem">Visi&oacute;n General</h3>
+  <p>El ramo de Da&ntilde;os (sin Autos) representa el <strong>14.5% del sector</strong> con $131,819 M MXN en primas. Es el mercado <strong>m&aacute;s fragmentado</strong> &mdash; no hay un l&iacute;der con &gt;15%. Los principales jugadores son AXA, Chubb, Zurich, GNP, Mapfre y HDI.</p>
+  <p>Se distribuye principalmente v&iacute;a <strong>brokers especializados y agentes corporativos</strong>. La competencia en este segmento se gana con capacidad t&eacute;cnica de suscripci&oacute;n, no con escala de distribuci&oacute;n.</p>
+
+  <h3>Subramos de Da&ntilde;os</h3>
+  <div class="card-grid">
+    <div class="card"><div class="card-title">Incendio y L&iacute;neas Aliadas</div><p>Cobertura base para edificios, contenidos y maquinaria. Producto maduro, amplia oferta.</p></div>
+    <div class="card"><div class="card-title">Terremoto y Cat&aacute;strofes</div><p>M&eacute;xico altamente expuesto. Reaseguro internacional clave. Primas significativas.</p></div>
+    <div class="card"><div class="card-title">Transporte</div><p>Carga terrestre, mar&iacute;tima y a&eacute;rea. HDI y Mapfre lideran. Nearshoring impulsa volumen.</p></div>
+    <div class="card"><div class="card-title">Cr&eacute;dito y Cauci&oacute;n</div><p>Nicho especializado. Euler Hermes, Coface, Atradius dominan.</p></div>
+    <div class="card"><div class="card-title">Agr&iacute;cola</div><p>Agroasemex y especializadas. Mercado nicho vinculado a pol&iacute;tica agr&iacute;cola.</p></div>
+    <div class="card" style="border: 2px solid var(--teal);"><div class="card-title" style="color:var(--teal)">Responsabilidad Civil</div><p><strong>Foco de este estudio.</strong> Subramo con mayor potencial de crecimiento dentro de Da&ntilde;os. An&aacute;lisis detallado a continuaci&oacute;n.</p></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PARTE IV — RESPONSABILIDAD CIVIL DETALLADO -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="rc">
+  <div class="part-header">
+    <div class="section-label">Parte IV &mdash; An&aacute;lisis Profundo</div>
+    <h2>Responsabilidad Civil: 9 Subramos</h2>
+    <p>Marco legal, competidores, coberturas, tama&ntilde;o de mercado y brechas vs. mercados maduros para cada subramo.</p>
+  </div>
+
+  <!-- Glossary -->
+  <div class="callout" style="margin-top:2.5rem">
+    <p><strong>Glosario de siglas RC:</strong></p>
+    <p style="margin-top:0.5rem">
+      <strong>RC</strong> = Responsabilidad Civil &nbsp;|&nbsp;
+      <strong>E&amp;O</strong> = Errors &amp; Omissions (errores y omisiones profesionales) &nbsp;|&nbsp;
+      <strong>D&amp;O</strong> = Directors &amp; Officers (directores y funcionarios) &nbsp;|&nbsp;
+      <strong>CAR</strong> = Contractor&rsquo;s All Risk (todo riesgo de contratistas) &nbsp;|&nbsp;
+      <strong>EAR</strong> = Erection All Risk (todo riesgo de montaje) &nbsp;|&nbsp;
+      <strong>Claims Made</strong> = la cobertura aplica si la reclamaci&oacute;n se presenta durante la vigencia de la p&oacute;liza &nbsp;|&nbsp;
+      <strong>Occurrence</strong> = la cobertura aplica si el hecho ocurri&oacute; durante la vigencia &nbsp;|&nbsp;
+      <strong>Side A/B/C</strong> = niveles de cobertura D&amp;O (A=directivos, B=reembolso a empresa, C=entidad en bolsa) &nbsp;|&nbsp;
+      <strong>SA</strong> = Suma Asegurada &nbsp;|&nbsp;
+      <strong>PyME</strong> = Peque&ntilde;a y Mediana Empresa
+    </p>
+  </div>
+
+  <h3>Visi&oacute;n general: RC representa menos del 5% de Da&ntilde;os en M&eacute;xico</h3>
+  <p>En mercados maduros como EE.UU. y Europa, la Responsabilidad Civil representa entre el <strong>15% y 20%</strong> del ramo de Da&ntilde;os. En M&eacute;xico, la cifra es inferior al <strong>5%</strong>. Esta brecha de penetraci&oacute;n es la oportunidad central de este an&aacute;lisis.</p>
+
+  <div class="chart-container">
+    <div class="chart-title">Crecimiento trimestral de RC en M&eacute;xico (2024)</div>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">2T 2024</div><div class="bar-track"><div class="bar-fill teal" style="width:62%"><span>+9.3%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">3T 2024</div><div class="bar-track"><div class="bar-fill blue" style="width:33%"><span>+5.0%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">4T 2024</div><div class="bar-track"><div class="bar-fill amber" style="width:11%"><span>-1.6%</span></div></div></div>
+    </div>
+    <p style="font-size:0.82rem;margin-top:0.75rem">Fuente: CNSF, Panorama Anal&iacute;tico 2T, 3T y 4T 2024.</p>
+  </div>
+
+  <!-- ── RC-1: RC General ── -->
+  <div class="rc-block" id="rc-general">
+    <h3>RC-1: RC General / Operaciones</h3>
+    <p class="glossary">Cubre da&ntilde;os corporales y materiales causados a terceros durante las operaciones del negocio. Es la cobertura de RC m&aacute;s b&aacute;sica y extendida. Opera bajo modelo Occurrence.</p>
+    <div class="rc-meta">
+      <div class="rc-meta-item"><strong>Tama&ntilde;o est.</strong><span>USD 150&ndash;200 M</span></div>
+      <div class="rc-meta-item"><strong>Madurez MX</strong><span class="badge tag-maduro">Maduro</span></div>
+      <div class="rc-meta-item"><strong>SA t&iacute;pica</strong><span>$1M &ndash; $500M+ MXN</span></div>
+    </div>
+    <p><strong>L&iacute;deres:</strong> Chubb (corporativo, farmac&eacute;utica, construcci&oacute;n), AIG (manufactura), GNP (PyMEs a corporativo), Zurich, Mapfre, AXA, HDI, Sura, GMX, Allianz, Lloyd&rsquo;s.</p>
+    <p><strong>Coberturas t&iacute;picas:</strong> RC sobre actividades e inmuebles, RC sobre productos, RC de contratistas independientes, contaminaci&oacute;n s&uacute;bita y accidental, RC cruzada, RC arrendatario, gastos de retiro de producto (recall).</p>
+    <p><strong>Tendencias:</strong> Nearshoring impulsa nuevas plantas que requieren RC desde d&iacute;a 1. Chubb y AIG ofrecen programas multinacionales. Mayor exigencia de RC en cadenas de suministro de empresas extranjeras.</p>
+  </div>
+
+  <!-- ── RC-2: E&O ── -->
+  <div class="rc-block" id="rc-eo">
+    <h3>RC-2: RC Profesional (E&amp;O &mdash; Errors &amp; Omissions)</h3>
+    <p class="glossary">Protege a profesionistas y empresas de servicios contra reclamaciones por errores, omisiones o negligencia profesional. Opera bajo Claims Made. Incluye gastos de defensa legal e indemnizaci&oacute;n por da&ntilde;os patrimoniales.</p>
+    <div class="rc-meta">
+      <div class="rc-meta-item"><strong>Tama&ntilde;o est.</strong><span>USD 40&ndash;60 M</span></div>
+      <div class="rc-meta-item"><strong>Madurez MX</strong><span class="badge tag-desarrollo">En desarrollo</span></div>
+      <div class="rc-meta-item"><strong>Penetraci&oacute;n</strong><span>&lt;5% de profesionistas</span></div>
+      <div class="rc-meta-item"><strong>SA t&iacute;pica</strong><span>$500K &ndash; $100M MXN</span></div>
+    </div>
+    <p><strong>Oferta en M&eacute;xico:</strong> AIG (amplia gama: tecnolog&iacute;a, consultor&iacute;a, financieros), Chubb (abogados, tecnolog&iacute;a, consultores), GNP (agentes de seguros, notarios, hospitales), GMX (amplia gama), Zurich, Mapfre.</p>
+    <p><strong>Profesiones cubiertas:</strong> M&eacute;dicos, contadores, abogados, arquitectos, ingenieros, consultores de TI, agentes de seguros, mediadores financieros.</p>
+    <p><strong>Brecha internacional:</strong> En EE.UU. el E&amp;O es obligatorio en muchos estados/profesiones con penetraci&oacute;n &gt;60%. En M&eacute;xico no es obligatorio y la penetraci&oacute;n estimada es &lt;5%.</p>
+    <p><strong>Tendencias:</strong> Aumento de demandas por mala praxis m&eacute;dica, exigencia de E&amp;O en contratos con multinacionales, crecimiento de demanda en sector TI por transformaci&oacute;n digital.</p>
+  </div>
+
+  <!-- ── RC-3: D&O ── -->
+  <div class="rc-block" id="rc-do">
+    <h3>RC-3: Directores y Funcionarios (D&amp;O &mdash; Directors &amp; Officers)</h3>
+    <p class="glossary">Protege el patrimonio personal de directivos y consejeros ante reclamaciones por decisiones de gesti&oacute;n que causen p&eacute;rdidas a accionistas, empleados o reguladores. Opera bajo Claims Made. Estructura: Side A (directivo), Side B (reembolso empresa), Side C (entidad listada en bolsa).</p>
+    <div class="rc-meta">
+      <div class="rc-meta-item"><strong>Tama&ntilde;o est.</strong><span>USD 80&ndash;120 M</span></div>
+      <div class="rc-meta-item"><strong>Madurez MX</strong><span class="badge tag-desarrollo">En desarrollo</span></div>
+      <div class="rc-meta-item"><strong>P&oacute;lizas activas</strong><span>~3,000&ndash;5,000</span></div>
+      <div class="rc-meta-item"><strong>Crecimiento</strong><span>8&ndash;12% anual</span></div>
+    </div>
+    <p><strong>Penetraci&oacute;n:</strong> Empresas listadas BMV: 70&ndash;80%. Grandes no listadas: 30&ndash;40%. <strong>PyMEs: &lt;5% &mdash; mercado pr&aacute;cticamente inexistente.</strong></p>
+    <p><strong>Oferta en M&eacute;xico:</strong> Chubb (corporativo + PyMEs &mdash; producto espec&iacute;fico), AIG (emisoras BMV, corporativo), Zurich (Side A, B, C), Mapfre, GNP, Howden (broker).</p>
+    <p><strong>Coberturas sublimitadas:</strong> Gastos de defensa por contaminaci&oacute;n, extradici&oacute;n, bloqueo de bienes, homicidio corporativo culposo, manejo de crisis, multas, gastos de investigaci&oacute;n.</p>
 
     <div class="table-wrap">
       <table>
-        <thead>
-          <tr><th>Indicador</th><th>M&eacute;xico</th><th>Prom. LATAM</th><th>Prom. OCDE</th><th>Chile</th></tr>
-        </thead>
+        <thead><tr><th>Perfil empresa</th><th>SA t&iacute;pica</th><th>Prima anual est.</th></tr></thead>
         <tbody>
-          <tr><td>Penetraci&oacute;n (primas/PIB)</td><td><strong>2.4&ndash;3.2%</strong></td><td>3.0%</td><td>9.3%</td><td>4.7%</td></tr>
+          <tr><td>Mediana, bajo riesgo</td><td>USD 2&ndash;10 M</td><td>USD 8,000&ndash;25,000</td></tr>
+          <tr><td>Mediana, sector regulado</td><td>USD 5&ndash;15 M</td><td>USD 20,000&ndash;60,000</td></tr>
+          <tr><td>Grande no listada</td><td>USD 10&ndash;25 M</td><td>USD 40,000&ndash;150,000</td></tr>
+          <tr><td>Emisora BMV (mid cap)</td><td>USD 15&ndash;50 M</td><td>USD 80,000&ndash;300,000</td></tr>
+          <tr><td>Emisora BMV (large cap)</td><td>USD 50&ndash;200 M+</td><td>USD 200,000&ndash;1 M+</td></tr>
         </tbody>
       </table>
     </div>
+    <p><strong>Tendencias:</strong> Compliance y gobierno corporativo impulsan demanda. Aumento de acciones colectivas contra directivos. Crecimiento de demandas por responsabilidad fiscal solidaria. Chubb desarrolla expl&iacute;citamente D&amp;O para PyMEs en LATAM.</p>
+  </div>
 
-    <h3>Distribuci&oacute;n por Ramo</h3>
-    <div class="table-wrap">
+  <!-- ── RC-4: Producto ── -->
+  <div class="rc-block" id="rc-producto">
+    <h3>RC-4: Responsabilidad por Producto</h3>
+    <p class="glossary">Cubre da&ntilde;os causados a consumidores o terceros por productos defectuosos fabricados, distribuidos o vendidos por el asegurado. Incluye defectos de fabricaci&oacute;n, dise&ntilde;o y falta de advertencias. Puede incluir Recall (retiro de producto).</p>
+    <div class="rc-meta">
+      <div class="rc-meta-item"><strong>Tama&ntilde;o est.</strong><span>USD 50&ndash;80 M</span></div>
+      <div class="rc-meta-item"><strong>Madurez MX</strong><span class="badge tag-desarrollo">En desarrollo</span></div>
+      <div class="rc-meta-item"><strong>P&oacute;lizas est.</strong><span>8,000&ndash;15,000</span></div>
+    </div>
+    <p><strong>Oferta:</strong> Chubb (farmac&eacute;utica, automotriz, qu&iacute;micos &mdash; incluye Recall), AIG (manufactura, importadores &mdash; sublimitada), GNP (manufactura PyME), GMX (alimentaria), Mapfre, Zurich, Allianz, Sura (como extensi&oacute;n de RC General).</p>
+    <p><strong>Factor cr&iacute;tico &mdash; exportaci&oacute;n a EE.UU.:</strong> Cuando un fabricante mexicano exporta a EE.UU., la prima puede ser <strong>2&ndash;5x mayor</strong> por la exposici&oacute;n a da&ntilde;os punitivos y acciones colectivas (class actions).</p>
+    <p><strong>Tendencias:</strong> Nearshoring incrementa manufactura en M&eacute;xico y la necesidad de RC Producto conforme a est&aacute;ndares internacionales. COFEPRIS y PROFECO fortalecen vigilancia post-mercado. E-commerce genera nuevos riesgos para vendedores online.</p>
+  </div>
+
+  <!-- ── RC-5: Ambiental ── -->
+  <div class="rc-block" id="rc-ambiental">
+    <h3>RC-5: RC Ambiental / Contaminaci&oacute;n</h3>
+    <p class="glossary">Cubre costos de remediaci&oacute;n, limpieza y da&ntilde;os a terceros por contaminaci&oacute;n. A diferencia de la RC General (que solo cubre contaminaci&oacute;n s&uacute;bita), la RC Ambiental dedicada cubre contaminaci&oacute;n paulatina/gradual.</p>
+    <div class="rc-meta">
+      <div class="rc-meta-item"><strong>Tama&ntilde;o est.</strong><span>USD 15&ndash;30 M</span></div>
+      <div class="rc-meta-item"><strong>Madurez MX</strong><span class="badge tag-emergente">Emergente</span></div>
+      <div class="rc-meta-item"><strong>Penetraci&oacute;n</strong><span>&lt;1% de empresas con exposici&oacute;n</span></div>
+    </div>
+    <p><strong>Marco legal robusto:</strong> La Ley Federal de Responsabilidad Ambiental (LFRA, 2013) establece <strong>responsabilidad objetiva</strong> &mdash; el contaminador paga independientemente de negligencia. M&eacute;xico tiene ~700+ sitios contaminados sin remediar.</p>
+    <p><strong>Solo 4 aseguradoras ofrecen producto dedicado:</strong> Chubb (s&uacute;bita + paulatina + remediaci&oacute;n), AIG (predios, transporte, contratistas), Berkley (RCP + transporte), GMX (ambiental + hidrocarburos). Las dem&aacute;s solo cubren contaminaci&oacute;n s&uacute;bita dentro de RC General.</p>
+    <p><strong>Oportunidad:</strong> El marco legal existe pero la adopci&oacute;n del seguro es m&iacute;nima. ESG, nearshoring y remediaci&oacute;n de pasivos ambientales en M&amp;A impulsan demanda. M&eacute;xico representa <strong>&lt;1% del mercado global</strong> de seguros ambientales (USD 3,100 M global en 2023).</p>
+  </div>
+
+  <!-- ── RC-6: Cyber ── -->
+  <div class="rc-block" id="rc-cyber" style="border: 2px solid var(--teal);">
+    <h3>RC-6: Cyber / Riesgos Digitales</h3>
+    <p class="glossary">Cubre p&eacute;rdidas propias (first party) y responsabilidad ante terceros (third party) por brechas de seguridad, ataques cibern&eacute;ticos, ransomware, robo de datos y fallos de sistemas digitales.</p>
+    <div class="rc-meta">
+      <div class="rc-meta-item"><strong>Tama&ntilde;o est.</strong><span>USD 30&ndash;50 M</span></div>
+      <div class="rc-meta-item"><strong>Madurez MX</strong><span class="badge tag-emergente">Emergente / Crecimiento</span></div>
+      <div class="rc-meta-item"><strong>Crecimiento</strong><span style="color:var(--teal);font-weight:700">+30% anual</span></div>
+      <div class="rc-meta-item"><strong>Penetraci&oacute;n</strong><span>&lt;5% empresas</span></div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <h4>Coberturas First Party (da&ntilde;o propio)</h4>
+        <ul>
+          <li>Investigaci&oacute;n forense</li>
+          <li>Notificaci&oacute;n a afectados + monitoreo de cr&eacute;dito</li>
+          <li>Recuperaci&oacute;n de datos</li>
+          <li>Extorsi&oacute;n cibern&eacute;tica / ransomware</li>
+          <li>Interrupci&oacute;n de negocio por evento cyber</li>
+          <li>Restituci&oacute;n de imagen</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Coberturas Third Party (responsabilidad)</h4>
+        <ul>
+          <li>Violaci&oacute;n de datos personales</li>
+          <li>Violaci&oacute;n de datos corporativos confidenciales</li>
+          <li>Seguridad de datos (virus, robo de accesos)</li>
+          <li>Responsabilidad por contenido digital</li>
+          <li>Multas regulatorias (INAI)</li>
+        </ul>
+      </div>
+    </div>
+
+    <p><strong>Oferta en M&eacute;xico:</strong> AIG (CyberEdge&reg;), Chubb (Cyber Riesgos), GNP + Beazley (Cyber Safe &mdash; +4,000 incidentes gestionados), BBVA Seguros (PyME v&iacute;a bancaseguros), Zurich, Hiscox (PyMEs v&iacute;a brokers), <strong>Sura</strong> (Protecci&oacute;n Cibern&eacute;tica).</p>
+    <p><strong>Contexto:</strong> M&eacute;xico recibi&oacute; <strong>85 mil millones</strong> de intentos de ciberataque en 2022. Es el <strong>2&deg; pa&iacute;s m&aacute;s atacado en LATAM</strong>. Solo ~2,000&ndash;3,000 empresas tienen p&oacute;liza cyber dedicada. Si la penetraci&oacute;n alcanza 15% en 5 a&ntilde;os, el mercado potencial es de <strong>USD 150&ndash;250 M</strong>.</p>
+  </div>
+
+  <!-- ── RC-7: CAR/EAR ── -->
+  <div class="rc-block" id="rc-car">
+    <h3>RC-7: Construcci&oacute;n y Montaje (CAR / EAR)</h3>
+    <p class="glossary">CAR = Contractor&rsquo;s All Risk: seguro todo riesgo para obras en construcci&oacute;n. EAR = Erection All Risk: similar pero para montaje de maquinaria e instalaciones industriales. Cubren da&ntilde;os materiales a la obra + RC ante terceros.</p>
+    <div class="rc-meta">
+      <div class="rc-meta-item"><strong>Tama&ntilde;o est.</strong><span>USD 60&ndash;100 M</span></div>
+      <div class="rc-meta-item"><strong>Madurez MX</strong><span class="badge tag-maduro">Maduro</span></div>
+      <div class="rc-meta-item"><strong>Tasa t&iacute;pica</strong><span>0.1%&ndash;0.5% del valor de obra</span></div>
+    </div>
+    <p><strong>Oferta:</strong> Mapfre (producto dedicado), Chubb (proyectos complejos), Liberty Specialty (l&iacute;der global en construcci&oacute;n), GMX, Berkley, Zurich, AXA, GNP, HDI, Sura (Seguro de Obra Civil + Montaje).</p>
+    <p><strong>Vinculado a megaproyectos:</strong> Tren Maya, Aeropuerto Felipe &Aacute;ngeles, Corredor Interoce&aacute;nico, Refiner&iacute;a Dos Bocas. El sector construcci&oacute;n representa ~7% del PIB mexicano.</p>
+    <p><strong>Tendencias:</strong> Energ&iacute;as renovables (solar, e&oacute;lica) requieren EAR especializado. PPPs requieren esquemas complejos (CAR + RC + D&amp;O). Alta exposici&oacute;n a terremoto y hurac&aacute;n eleva primas.</p>
+  </div>
+
+  <!-- ── RC-8: Transporte ── -->
+  <div class="rc-block" id="rc-transporte">
+    <h3>RC-8: RC Transporte (Carga y Flota)</h3>
+    <p class="glossary">Cubre la responsabilidad del transportista por da&ntilde;os a mercanc&iacute;a de terceros durante su traslado y da&ntilde;os a terceras personas/propiedades. Importante: el seguro de carga protege la mercanc&iacute;a (lo contrata el due&ntilde;o); la RC del transportista protege al transportista.</p>
+    <div class="rc-meta">
+      <div class="rc-meta-item"><strong>Tama&ntilde;o est.</strong><span>USD 40&ndash;60 M</span></div>
+      <div class="rc-meta-item"><strong>Madurez MX</strong><span class="badge tag-maduro">Maduro</span></div>
+      <div class="rc-meta-item"><strong>RC m&iacute;nima legal</strong><span>$100,000 MXN</span></div>
+    </div>
+    <p><strong>L&iacute;deres:</strong> HDI (l&iacute;der en transporte pesado), GNP (camiones, tractocamiones), Mapfre (carga nacional e internacional), AIG (transporte especializado), GMX (carga en tr&aacute;nsito), Qu&aacute;litas (flotillas), Sura (PyMEs).</p>
+    <p><strong>Contexto:</strong> M&aacute;s del 80% de la carga en M&eacute;xico se mueve por carretera. La RC para transporte federal es <strong>obligatoria por ley</strong>. Nearshoring incrementa significativamente el volumen.</p>
+    <p><strong>Tendencias:</strong> Telem&aacute;tica en flotas (tarificaci&oacute;n por comportamiento), electromovilidad en camiones, robo de carga como riesgo persistente, crecimiento del &uacute;ltimo kil&oacute;metro por e-commerce.</p>
+  </div>
+
+  <!-- ── RC-9: Patronal ── -->
+  <div class="rc-block" id="rc-patronal">
+    <h3>RC-9: RC Patronal (Employers&rsquo; Liability)</h3>
+    <p class="glossary">Cubre reclamaciones de empleados contra el patr&oacute;n por lesiones o enfermedades laborales cuando se atribuye responsabilidad a la empresa m&aacute;s all&aacute; de las prestaciones del IMSS. Opera como excedente del sistema de seguridad social obligatorio.</p>
+    <div class="rc-meta">
+      <div class="rc-meta-item"><strong>Tama&ntilde;o est.</strong><span>USD 30&ndash;50 M</span></div>
+      <div class="rc-meta-item"><strong>Madurez MX</strong><span class="badge tag-desarrollo">En desarrollo</span></div>
+      <div class="rc-meta-item"><strong>SA t&iacute;pica</strong><span>$1M &ndash; $50M MXN</span></div>
+    </div>
+    <p><strong>Oferta:</strong> Generalmente como extensi&oacute;n/endoso de RC General (no stand-alone): Chubb, AIG, Allianz, GNP, Zurich, Mapfre.</p>
+    <p><strong>Catalizador: Reforma de outsourcing (2021).</strong> Al eliminar la subcontrataci&oacute;n, las empresas asumieron directamente la responsabilidad patronal sobre empleados que antes estaban en n&oacute;mina de terceros. Esto <strong>increment&oacute; la exposici&oacute;n</strong>.</p>
+    <p><strong>Tendencias:</strong> NOM-035 (riesgo psicosocial) abre reclamaciones por estr&eacute;s laboral y burnout. Tribunales laborales reformados procesan m&aacute;s casos con mayor celeridad. Construcci&oacute;n y manufactura de nearshoring generan mayor demanda.</p>
+  </div>
+
+  <!-- ── Maturity Grid ── -->
+  <h3>Comparativa de Madurez: M&eacute;xico vs. Mercados de Referencia</h3>
+  <div class="maturity-grid">
+    <div class="cell header" style="justify-content:flex-start">Subramo</div>
+    <div class="cell header">M&eacute;xico</div>
+    <div class="cell header">EE.UU.</div>
+    <div class="cell header">Europa Occ.</div>
+    <div class="cell header">LATAM prom.</div>
+
+    <div class="cell row-label">RC General</div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-d">D</div></div>
+    <div class="cell row-label">E&amp;O (Profesional)</div><div class="cell"><div class="dot dot-d">D</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-e">E</div></div>
+    <div class="cell row-label">D&amp;O</div><div class="cell"><div class="dot dot-d">D</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-e">E</div></div>
+    <div class="cell row-label">RC Producto</div><div class="cell"><div class="dot dot-d">D</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-e">E</div></div>
+    <div class="cell row-label">RC Ambiental</div><div class="cell"><div class="dot dot-e">E</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-e">E</div></div>
+    <div class="cell row-label">RC Cyber</div><div class="cell"><div class="dot dot-e">E</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-d">D</div></div><div class="cell"><div class="dot dot-e">E</div></div>
+    <div class="cell row-label">CAR / EAR</div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-d">D</div></div>
+    <div class="cell row-label">RC Transporte</div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-d">D</div></div>
+    <div class="cell row-label">RC Patronal</div><div class="cell"><div class="dot dot-d">D</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-m">M</div></div><div class="cell"><div class="dot dot-e">E</div></div>
+  </div>
+  <p style="font-size:0.85rem"><span class="dot dot-e" style="display:inline-flex;width:18px;height:18px;font-size:0.6rem;vertical-align:middle;margin-right:4px">E</span> Emergente &nbsp;&nbsp;
+  <span class="dot dot-d" style="display:inline-flex;width:18px;height:18px;font-size:0.6rem;vertical-align:middle;margin-right:4px">D</span> En desarrollo &nbsp;&nbsp;
+  <span class="dot dot-m" style="display:inline-flex;width:18px;height:18px;font-size:0.6rem;vertical-align:middle;margin-right:4px">M</span> Maduro</p>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PARTE V — GAP ANALYSIS SURA -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="gap">
+  <div class="part-header">
+    <div class="section-label">Parte V</div>
+    <h2>Gap Analysis: Sura M&eacute;xico vs. Mercado</h2>
+    <p>Evaluaci&oacute;n producto por producto. Sura opera en M&eacute;xico desde 2016, con foco en PyMEs y paquetes multirriesgo.</p>
+  </div>
+
+  <h3 style="margin-top:2.75rem">Portafolio completo de Sura</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Producto</th><th>Estado</th><th>Detalle</th></tr></thead>
+      <tbody>
+        <tr><td><strong>GMM</strong></td><td><span class="badge badge-ok">&#10003; Competitivo</span></td><td>Ala Azul / Ala Azul Plus. Individual + Colectivo. SA m&aacute;x $50M (mercado ofrece ilimitada). Sin cobertura internacional.</td></tr>
+        <tr><td><strong>Autos</strong></td><td><span class="badge badge-ok">&#10003; Competitivo</span></td><td>4 niveles (B&aacute;sica, Limitada, Amplia, Total) + Flotillas + Uber. Sin motos ni cl&aacute;sicos. Participaci&oacute;n &lt;3%.</td></tr>
+        <tr><td><strong>Vida</strong></td><td><span class="badge badge-ok">&#10003; S&oacute;lido</span></td><td>Individual (Plan Vive, Protecci&oacute;n, Accidental) + Grupo + Deudor + Ahorro. Sin vida cr&eacute;dito ni canal bancario.</td></tr>
+        <tr><td><strong>Da&ntilde;os tradicionales</strong></td><td><span class="badge badge-ok">&#10003; S&oacute;lido</span></td><td>Plan Empresario SURA: incendio, terremoto, transporte, robo, equipo. Sin cr&eacute;dito/cauci&oacute;n ni agr&iacute;cola.</td></tr>
+        <tr><td><strong>RC General</strong></td><td><span class="badge badge-ok">&#10003; Competitivo</span></td><td>RC Da&ntilde;os a Terceros (PyME + Corp). Incluye productos, contratistas, ambiental accidental, viajes internacionales.</td></tr>
+        <tr class="highlight-row"><td><strong>E&amp;O (RC Profesional)</strong></td><td><span class="badge badge-no">&#10007; No detectado</span></td><td>Brecha cr&iacute;tica. AIG, Chubb, GNP, GMX lo ofrecen. Mercado en crecimiento.</td></tr>
+        <tr class="highlight-row"><td><strong>D&amp;O</strong></td><td><span class="badge badge-warn">&#9888; Limitado</span></td><td>No catalogado p&uacute;blicamente. Posible v&iacute;a reaseguro facultativo. PyMEs: mercado virgen (&lt;5%).</td></tr>
+        <tr><td><strong>RC Producto</strong></td><td><span class="badge badge-warn">&#9888; B&aacute;sico</span></td><td>Como extensi&oacute;n de RC General. Sin Recall dedicado ni cobertura en jurisdicci&oacute;n EE.UU.</td></tr>
+        <tr><td><strong>RC Ambiental</strong></td><td><span class="badge badge-warn">&#9888; Parcial</span></td><td>Solo contaminaci&oacute;n accidental. Sin cobertura gradual, remediaci&oacute;n ni RCP.</td></tr>
+        <tr><td><strong>RC Cyber</strong></td><td><span class="badge badge-ok">&#10003; Completo</span></td><td>Protecci&oacute;n Cibern&eacute;tica: first + third party, ransomware, fraude bancario, gesti&oacute;n reputacional. Ventaja competitiva.</td></tr>
+        <tr><td><strong>CAR / EAR</strong></td><td><span class="badge badge-ok">&#10003; S&oacute;lido</span></td><td>Obra Civil + Montaje (l&iacute;nea Ingenier&iacute;a). 9% de primas brutas. Competitivo en segmento medio.</td></tr>
+        <tr><td><strong>RC Transporte</strong></td><td><span class="badge badge-ok">&#10003; Competitivo</span></td><td>Transporte de Mercanc&iacute;a (PyME + Corp). 5% de primas.</td></tr>
+        <tr><td><strong>RC Patronal</strong></td><td><span class="badge badge-warn">&#9888; Impl&iacute;cito</span></td><td>Probablemente disponible como extensi&oacute;n, pero no expl&iacute;cito en cat&aacute;logo.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Fortalezas clave de Sura</h3>
+  <div class="card-grid">
+    <div class="card"><div class="card-tag tag-maduro">Fortaleza</div><div class="card-title">Plan Empresario SURA</div><p>Paquete multirriesgo integrado (da&ntilde;os + RC) en una sola p&oacute;liza. Ventaja vs productos standalone de la competencia. Ideal para PyMEs.</p></div>
+    <div class="card"><div class="card-tag tag-maduro">Fortaleza</div><div class="card-title">Producto Cyber completo</div><p>Protecci&oacute;n Cibern&eacute;tica con first + third party, fraude bancario, ransomware y gesti&oacute;n reputacional. Sorprendentemente robusto para el segmento medio.</p></div>
+    <div class="card"><div class="card-tag tag-maduro">Fortaleza</div><div class="card-title">Base de clientes PyME</div><p>Canal de distribuci&oacute;n establecido en el segmento que est&aacute; m&aacute;s desatendido en RC especializado.</p></div>
+    <div class="card"><div class="card-tag tag-desarrollo">Ventaja</div><div class="card-title">Marca regional LATAM</div><p>Presencia en 11 pa&iacute;ses. Credibilidad para multinacionales del nearshoring que buscan cobertura regional consistente.</p></div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- PARTE VI — PLAYBOOK SURA -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="playbook">
+  <div class="part-header">
+    <div class="section-label">Parte VI &mdash; Playbook</div>
+    <h2>Plan de Acci&oacute;n Estrat&eacute;gico para Sura</h2>
+    <p>6 iniciativas concretas, priorizadas por impacto y viabilidad, con pasos espec&iacute;ficos de ejecuci&oacute;n.</p>
+  </div>
+
+  <div style="margin-top:2.5rem">
+
+  <div class="playbook-step">
+    <div class="step-num">01</div>
+    <h4>Lanzar E&amp;O (RC Profesional) para PyMEs y profesionistas</h4>
+    <p>Sura no tiene este producto y el mercado crece por exigencias contractuales de multinacionales y el auge de servicios de TI. Es la brecha m&aacute;s cr&iacute;tica.</p>
+    <p><strong>Acci&oacute;n espec&iacute;fica:</strong></p>
+    <ul>
+      <li>Desarrollar producto E&amp;O simplificado para <strong>3 verticales iniciales</strong>: (1) empresas de TI y desarrollo de software, (2) consultores de negocios, (3) profesionistas de salud.</li>
+      <li>Estructura Claims Made con primas desde ~$8,000 MXN/a&ntilde;o para profesionistas independientes.</li>
+      <li>Distribuir v&iacute;a la base existente de clientes PyME &mdash; cross-sell con Plan Empresario.</li>
+      <li>Usar capacidad de reaseguro de Suramericana (operaci&oacute;n regional) para respaldo t&eacute;cnico.</li>
+    </ul>
+    <div class="meta">
+      <div class="meta-item"><strong>Mercado objetivo:</strong> USD 40&ndash;60 M</div>
+      <div class="meta-item"><strong>Competidores directos:</strong> AIG, Chubb, GMX</div>
+      <div class="meta-item"><strong>Prioridad:</strong> <span class="badge badge-no">Alta</span></div>
+      <div class="meta-item"><strong>Horizonte:</strong> 6&ndash;12 meses</div>
+    </div>
+  </div>
+
+  <div class="playbook-step">
+    <div class="step-num">02</div>
+    <h4>Crear D&amp;O (Directores y Funcionarios) empaquetado para PyMEs</h4>
+    <p>La penetraci&oacute;n D&amp;O en PyMEs es <strong>&lt;5%</strong>. Las multinacionales (AIG, Chubb) apuntan a corporativos grandes. Sura puede ser el primero en democratizar D&amp;O.</p>
+    <p><strong>Acci&oacute;n espec&iacute;fica:</strong></p>
+    <ul>
+      <li>Dise&ntilde;ar producto D&amp;O simplificado con <strong>Side A + Side B</strong> (sin Side C que es para empresas listadas).</li>
+      <li>SA inicial: USD 2&ndash;10 M. Prima objetivo: USD 5,000&ndash;15,000/a&ntilde;o (accesible para PyME).</li>
+      <li>Incluir coberturas de <strong>responsabilidad fiscal solidaria</strong> (riesgo #1 para directivos de PyMEs mexicanas).</li>
+      <li>Bundle con Plan Empresario SURA: ofrecerlo como &ldquo;upgrade corporativo&rdquo; a clientes existentes.</li>
+      <li>Crear material educativo para agentes sobre <strong>por qu&eacute; un director de PyME necesita D&amp;O</strong> (pocos lo entienden).</li>
+    </ul>
+    <div class="meta">
+      <div class="meta-item"><strong>Mercado objetivo:</strong> USD 80&ndash;120 M (total); segmento PyME ~USD 10&ndash;20 M</div>
+      <div class="meta-item"><strong>Competencia en PyME:</strong> Pr&aacute;cticamente ninguna</div>
+      <div class="meta-item"><strong>Prioridad:</strong> <span class="badge badge-no">Alta</span></div>
+      <div class="meta-item"><strong>Horizonte:</strong> 9&ndash;15 meses</div>
+    </div>
+  </div>
+
+  <div class="playbook-step">
+    <div class="step-num">03</div>
+    <h4>Posicionar agresivamente el Seguro de Protecci&oacute;n Cibern&eacute;tica</h4>
+    <p>Sura <strong>ya tiene un producto Cyber completo</strong> &mdash; pero el mercado no lo sabe. Con crecimiento de 30% anual y penetraci&oacute;n &lt;5%, es una ventana de oportunidad.</p>
+    <p><strong>Acci&oacute;n espec&iacute;fica:</strong></p>
+    <ul>
+      <li>Campa&ntilde;a de posicionamiento espec&iacute;fica: &ldquo;<strong>Sura protege tu negocio digital</strong>&rdquo; dirigida a PyMEs con presencia online.</li>
+      <li>Crear <strong>calculadora de riesgo cibern&eacute;tico online</strong> en segurossura.com.mx para generar leads.</li>
+      <li>Ofrecer <strong>servicios de prevenci&oacute;n</strong> (scanning de vulnerabilidades, capacitaci&oacute;n de empleados) como diferenciador vs. AIG y Chubb.</li>
+      <li>Alianza con plataformas de e-commerce (Shopify MX, MercadoLibre) para distribuci&oacute;n masiva.</li>
+      <li>Desarrollar versi&oacute;n &ldquo;<strong>Cyber Enterprise</strong>&rdquo; con SA de USD 5 M+ para empresas medianas-grandes.</li>
+    </ul>
+    <div class="meta">
+      <div class="meta-item"><strong>Mercado potencial (5 a&ntilde;os):</strong> USD 150&ndash;250 M</div>
+      <div class="meta-item"><strong>Ventaja actual:</strong> Producto ya existe y es competitivo</div>
+      <div class="meta-item"><strong>Prioridad:</strong> <span class="badge badge-warn">Media-Alta</span></div>
+      <div class="meta-item"><strong>Horizonte:</strong> 3&ndash;6 meses (posicionamiento), 12 meses (Enterprise)</div>
+    </div>
+  </div>
+
+  <div class="playbook-step">
+    <div class="step-num">04</div>
+    <h4>Ampliar RC Ambiental: de accidental a contaminaci&oacute;n gradual</h4>
+    <p>Sura solo cubre contaminaci&oacute;n s&uacute;bita/accidental dentro de RC General. La LFRA (2013) exige responsabilidad objetiva, pero solo 4 aseguradoras ofrecen producto dedicado.</p>
+    <p><strong>Acci&oacute;n espec&iacute;fica:</strong></p>
+    <ul>
+      <li>Alianza de capacidad con <strong>Berkley o Lloyd&rsquo;s</strong> como respaldo de reaseguro para contaminaci&oacute;n gradual.</li>
+      <li>Crear endoso &ldquo;<strong>RC Ambiental Plus</strong>&rdquo; dentro de RC General que incluya remediaci&oacute;n de suelos y RCP (Responsabilidad por Contaminaci&oacute;n de Predios).</li>
+      <li>Dirigir a sectores espec&iacute;ficos: <strong>industria manufactura de nearshoring, qu&iacute;mica, transporte de materiales peligrosos, inmobiliario industrial</strong> (M&amp;A).</li>
+      <li>Posicionar como requisito para empresas con certificaciones ESG.</li>
+    </ul>
+    <div class="meta">
+      <div class="meta-item"><strong>Mercado:</strong> USD 15&ndash;30 M (creciendo)</div>
+      <div class="meta-item"><strong>Competencia dedicada:</strong> Solo 4 (Chubb, AIG, Berkley, GMX)</div>
+      <div class="meta-item"><strong>Prioridad:</strong> <span class="badge badge-warn">Media</span></div>
+      <div class="meta-item"><strong>Horizonte:</strong> 12&ndash;18 meses</div>
+    </div>
+  </div>
+
+  <div class="playbook-step">
+    <div class="step-num">05</div>
+    <h4>Bundle &ldquo;RC Total PyME&rdquo; &mdash; paquete integral &uacute;nico en el mercado</h4>
+    <p>Ning&uacute;n competidor en M&eacute;xico ofrece un bundle de RC General + E&amp;O + Cyber + D&amp;O b&aacute;sico para PyMEs. Sura puede ser el primero.</p>
+    <p><strong>Acci&oacute;n espec&iacute;fica:</strong></p>
+    <ul>
+      <li>Crear producto &ldquo;<strong>Sura RC Total</strong>&rdquo; que integre en una sola p&oacute;liza: RC General + E&amp;O + Cyber + D&amp;O b&aacute;sico (Side A+B).</li>
+      <li>Tres niveles: <strong>Esencial</strong> (RC General + Cyber), <strong>Profesional</strong> (+ E&amp;O), <strong>Directivo</strong> (+ D&amp;O).</li>
+      <li>Pricing competitivo por bundle: <strong>20&ndash;30% menos</strong> que contratando cada producto por separado.</li>
+      <li>Simplificar suscripci&oacute;n: un solo cuestionario, una sola p&oacute;liza, un solo ajustador.</li>
+      <li>Meta: <strong>1,000 p&oacute;lizas en el primer a&ntilde;o</strong> v&iacute;a base existente de clientes Plan Empresario.</li>
+    </ul>
+    <div class="meta">
+      <div class="meta-item"><strong>Diferenciador:</strong> &Uacute;nico en M&eacute;xico</div>
+      <div class="meta-item"><strong>Canal:</strong> Base existente Plan Empresario (cross-sell)</div>
+      <div class="meta-item"><strong>Prioridad:</strong> <span class="badge badge-warn">Media-Alta</span></div>
+      <div class="meta-item"><strong>Horizonte:</strong> 15&ndash;18 meses (requiere E&amp;O y D&amp;O primero)</div>
+    </div>
+  </div>
+
+  <div class="playbook-step">
+    <div class="step-num">06</div>
+    <h4>Fortalecer RC Producto para exportadores del nearshoring</h4>
+    <p>El nearshoring trae fabricantes que exportan a EE.UU. y necesitan RC Producto con cobertura en jurisdicci&oacute;n estadounidense y Recall dedicado.</p>
+    <p><strong>Acci&oacute;n espec&iacute;fica:</strong></p>
+    <ul>
+      <li>Crear endoso &ldquo;<strong>RC Producto Export</strong>&rdquo; con cobertura expl&iacute;cita en jurisdicci&oacute;n EE.UU.</li>
+      <li>Incluir <strong>Recall / Retiro de Producto</strong> como cobertura sublimitada (USD 500K&ndash;2M).</li>
+      <li>Dirigir a sectores nearshoring: <strong>autopartes, electr&oacute;nica, dispositivos m&eacute;dicos, alimentos procesados</strong>.</li>
+      <li>Aprovechar la presencia LATAM de Grupo SURA para ofrecer <strong>programas regionales</strong> a multinacionales.</li>
+    </ul>
+    <div class="meta">
+      <div class="meta-item"><strong>Mercado:</strong> USD 50&ndash;80 M (creciendo por nearshoring)</div>
+      <div class="meta-item"><strong>Competencia:</strong> Chubb y AIG dominan, pero con foco corporativo grande</div>
+      <div class="meta-item"><strong>Prioridad:</strong> <span class="badge badge-warn">Media</span></div>
+      <div class="meta-item"><strong>Horizonte:</strong> 12&ndash;18 meses</div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Resumen visual del playbook -->
+  <h3>Resumen: Hoja de Ruta</h3>
+  <div class="chart-container">
+    <div class="chart-title">Priorizaci&oacute;n de iniciativas por impacto y horizonte</div>
+    <div class="table-wrap" style="border:none">
       <table>
-        <thead>
-          <tr><th>Ramo / Operaci&oacute;n</th><th>Prima directa (MXN M)</th><th>Participaci&oacute;n</th></tr>
-        </thead>
+        <thead><tr><th>Iniciativa</th><th>Prioridad</th><th>Horizonte</th><th>Mercado</th><th>Ventaja Sura</th></tr></thead>
         <tbody>
-          <tr class="highlight-row"><td><strong>Vida</strong></td><td>$375,511</td><td><strong>41.3%</strong></td></tr>
-          <tr><td><strong>Autom&oacute;viles</strong></td><td>$193,217</td><td><strong>21.3%</strong></td></tr>
-          <tr><td><strong>A&amp;E</strong> (incl. GMM)</td><td>$169,654</td><td><strong>18.7%</strong></td></tr>
-          <tr><td><strong>Da&ntilde;os</strong> (sin Autos)</td><td>$131,819</td><td><strong>14.5%</strong></td></tr>
-          <tr><td>Pensiones</td><td>$38,588</td><td>4.2%</td></tr>
+          <tr class="highlight-row"><td><strong>E&amp;O para PyMEs</strong></td><td><span class="badge badge-no">Alta</span></td><td>6&ndash;12 meses</td><td>USD 40&ndash;60 M</td><td>Base de clientes + reaseguro regional</td></tr>
+          <tr class="highlight-row"><td><strong>D&amp;O para PyMEs</strong></td><td><span class="badge badge-no">Alta</span></td><td>9&ndash;15 meses</td><td>USD 10&ndash;20 M (PyME)</td><td>Mercado virgen, sin competencia</td></tr>
+          <tr><td><strong>Posicionar Cyber</strong></td><td><span class="badge badge-warn">Media-Alta</span></td><td>3&ndash;6 meses</td><td>USD 150&ndash;250 M (5yr)</td><td>Producto ya existe</td></tr>
+          <tr><td><strong>RC Ambiental Plus</strong></td><td><span class="badge badge-warn">Media</span></td><td>12&ndash;18 meses</td><td>USD 15&ndash;30 M</td><td>Solo 4 competidores dedicados</td></tr>
+          <tr><td><strong>Bundle RC Total PyME</strong></td><td><span class="badge badge-warn">Media-Alta</span></td><td>15&ndash;18 meses</td><td>&Uacute;nico en MX</td><td>Diferenciaci&oacute;n total</td></tr>
+          <tr><td><strong>RC Producto Export</strong></td><td><span class="badge badge-warn">Media</span></td><td>12&ndash;18 meses</td><td>USD 50&ndash;80 M</td><td>Marca regional LATAM</td></tr>
         </tbody>
       </table>
     </div>
+  </div>
 
-    <h3>Ranking de Aseguradoras &mdash; Top 10</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>#</th><th>Aseguradora</th><th>Market share</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td><strong>GNP</strong></td><td>12.49%</td></tr>
-          <tr><td>2</td><td><strong>MetLife M&eacute;xico</strong></td><td>10.84%</td></tr>
-          <tr><td>3</td><td><strong>BBVA Seguros</strong></td><td>9.75%</td></tr>
-          <tr><td>4</td><td><strong>Seguros Banorte</strong></td><td>7.80%</td></tr>
-          <tr><td>5</td><td><strong>AXA Seguros</strong></td><td>7.21%</td></tr>
-          <tr><td>6&ndash;10</td><td>Citibanamex, Qu&aacute;litas, Mapfre, Zurich, Chubb</td><td>&mdash;</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p>Las &ldquo;5 grandes&rdquo; concentran <strong>~44.2%</strong> del primaje total. El canal de <strong>bancaseguros</strong> impulsa el crecimiento de Banorte (+2.21 pp), Citibanamex (+1.55 pp) y BBVA (+1.32 pp).</p>
-
-    <h3>Canales de Distribuci&oacute;n</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Canal</th><th>Participaci&oacute;n (3T 2024)</th><th>Ramos dominantes</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Agentes</strong></td><td><strong>55%</strong></td><td>GMM (94%), Vida (40%)</td></tr>
-          <tr><td>Bancaseguros</td><td>~25%</td><td>Vida, Autos</td></tr>
-          <tr><td>Directo / Digital</td><td>~10%</td><td>Autos (creciendo)</td></tr>
-          <tr><td>Brokers especializados</td><td>~10%</td><td>Da&ntilde;os, RC, L&iacute;neas corporativas</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Tendencias Macro</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Tendencia</th><th>Descripci&oacute;n</th><th>Impacto en RC/Da&ntilde;os</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Nearshoring</strong></td><td>Manufactura extranjera incrementa exposici&oacute;n a riesgos industriales</td><td><strong>Alto</strong></td></tr>
-          <tr><td><strong>Ciberseguridad</strong></td><td>M&eacute;xico 2&deg; m&aacute;s atacado LATAM (23% incidentes)</td><td><strong>Muy alto</strong></td></tr>
-          <tr><td><strong>Regulaci&oacute;n ambiental</strong></td><td>LFRA 2013 + NOM m&aacute;s estrictas</td><td><strong>Alto</strong></td></tr>
-          <tr><td><strong>Gobierno corporativo</strong></td><td>Mayor exigencia en compliance</td><td><strong>Alto</strong></td></tr>
-          <tr><td><strong>Litigiosidad</strong></td><td>Aumento demandas laborales y de consumidores</td><td><strong>Medio-Alto</strong></td></tr>
-          <tr><td>Digitalizaci&oacute;n</td><td>Cotizaci&oacute;n y venta digital crece</td><td>Bajo (RC requiere suscripci&oacute;n especializada)</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- PARTE II — Responsabilidad Civil -->
-  <!-- ═══════════════════════════════════════════════ -->
-  <section class="section" id="rc">
-    <div class="part-header">
-      <div class="section-label">Parte II</div>
-      <h2>Responsabilidad Civil: An&aacute;lisis Detallado</h2>
-      <p>9 subramos analizados con marco legal, competidores, coberturas y comparativa internacional.</p>
-    </div>
-
-    <h3 style="margin-top:2.5rem">S&iacute;ntesis de RC por Subramo</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Subramo</th><th>Tama&ntilde;o est. (USD)</th><th>Madurez MX</th><th>L&iacute;der(es)</th><th>Tendencia</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>RC General</strong></td><td>$150&ndash;200 M</td><td><span class="badge tag-maduro">Maduro</span></td><td>GNP, AXA, Mapfre, Chubb</td><td>Estable; nearshoring impulsa</td></tr>
-          <tr><td><strong>E&amp;O (Profesional)</strong></td><td>$40&ndash;60 M</td><td><span class="badge tag-desarrollo">En desarrollo</span></td><td>AIG, Chubb, GMX</td><td>Crecimiento por regulaci&oacute;n</td></tr>
-          <tr><td><strong>D&amp;O</strong></td><td>$80&ndash;120 M</td><td><span class="badge tag-desarrollo">En desarrollo</span></td><td>AIG, Chubb, Zurich</td><td>Alto crecimiento</td></tr>
-          <tr><td><strong>RC Producto</strong></td><td>$50&ndash;80 M</td><td><span class="badge tag-desarrollo">En desarrollo</span></td><td>Chubb, AIG, AXA</td><td>Nearshoring + cadenas globales</td></tr>
-          <tr><td><strong>RC Ambiental</strong></td><td>$15&ndash;30 M</td><td><span class="badge tag-emergente">Emergente</span></td><td>Chubb, GMX, Berkley, AIG</td><td>LFRA impulsa</td></tr>
-          <tr class="highlight-row"><td><strong>RC Cyber</strong></td><td>$30&ndash;50 M</td><td><span class="badge tag-emergente">Emergente</span></td><td>Chubb, AIG, GNP</td><td><strong>+30% anual</strong></td></tr>
-          <tr><td><strong>CAR/EAR</strong></td><td>$60&ndash;100 M</td><td><span class="badge tag-maduro">Maduro</span></td><td>Mapfre, Liberty, Zurich</td><td>Infraestructura p&uacute;blica</td></tr>
-          <tr><td><strong>RC Transporte</strong></td><td>$40&ndash;60 M</td><td><span class="badge tag-maduro">Maduro</span></td><td>HDI, Mapfre, GMX</td><td>Estable</td></tr>
-          <tr><td><strong>RC Patronal</strong></td><td>$30&ndash;50 M</td><td><span class="badge tag-desarrollo">En desarrollo</span></td><td>Allianz, GNP, HDI</td><td>Litigiosidad laboral</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Hallazgos Clave</h3>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-title">Brecha de Penetraci&oacute;n</div>
-        <p>RC representa <strong>&lt;5%</strong> del ramo Da&ntilde;os en M&eacute;xico, vs <strong>15&ndash;20%</strong> en mercados maduros (EE.UU., Europa).</p>
-      </div>
-      <div class="card">
-        <div class="card-title">Dominio de Especialistas</div>
-        <p>En l&iacute;neas financieras (D&amp;O, E&amp;O, Cyber), <strong>AIG y Chubb</strong> concentran &gt;50% del mercado.</p>
-      </div>
-      <div class="card">
-        <div class="card-title">Nearshoring como Catalizador</div>
-        <p>La manufactura extranjera con est&aacute;ndares globales impulsa <strong>RC General, Producto y Ambiental</strong>.</p>
-      </div>
-      <div class="card">
-        <div class="card-title">Cyber Transformador</div>
-        <p>Crecimiento de <strong>30% anual</strong> con penetraci&oacute;n a&uacute;n &lt;5% de empresas mexicanas.</p>
-      </div>
-      <div class="card">
-        <div class="card-title">PyMEs Desatendidas</div>
-        <p>La mayor&iacute;a de productos RC est&aacute;n dise&ntilde;ados para corporativos; el mercado PyME est&aacute; en blanco.</p>
-      </div>
-      <div class="card">
-        <div class="card-title">Regulaci&oacute;n como Driver</div>
-        <p>LFRA (ambiental), LFPDPPP (datos), reformas LGSM (gobierno corporativo) empujan demanda.</p>
-      </div>
-    </div>
-
-    <h3>Comparativa de Madurez: M&eacute;xico vs. Mercados de Referencia</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Subramo</th><th>M&eacute;xico</th><th>EE.UU.</th><th>Europa Occ.</th><th>LATAM</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>RC General</td><td><span class="badge tag-maduro">M</span></td><td>M</td><td>M</td><td>D</td></tr>
-          <tr><td>E&amp;O</td><td><span class="badge tag-desarrollo">D</span></td><td>M</td><td>M</td><td>E</td></tr>
-          <tr><td>D&amp;O</td><td><span class="badge tag-desarrollo">D</span></td><td>M</td><td>M</td><td>E&ndash;D</td></tr>
-          <tr><td>RC Producto</td><td><span class="badge tag-desarrollo">D</span></td><td>M</td><td>M</td><td>E</td></tr>
-          <tr><td>RC Ambiental</td><td><span class="badge tag-emergente">E</span></td><td>M</td><td>M</td><td>E</td></tr>
-          <tr><td>RC Cyber</td><td><span class="badge tag-emergente">E&ndash;D</span></td><td>M</td><td>D&ndash;M</td><td>E</td></tr>
-          <tr><td>CAR/EAR</td><td><span class="badge tag-maduro">M</span></td><td>M</td><td>M</td><td>D</td></tr>
-          <tr><td>RC Transporte</td><td><span class="badge tag-maduro">M</span></td><td>M</td><td>M</td><td>D</td></tr>
-          <tr><td>RC Patronal</td><td><span class="badge tag-desarrollo">D</span></td><td>M</td><td>M</td><td>E&ndash;D</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="font-size:0.8rem;color:var(--graphite)">E = Emergente &nbsp;|&nbsp; D = En desarrollo &nbsp;|&nbsp; M = Maduro</p>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- PARTE III — Ramos -->
-  <!-- ═══════════════════════════════════════════════ -->
-  <section class="section" id="ramos">
-    <div class="part-header">
-      <div class="section-label">Parte III</div>
-      <h2>An&aacute;lisis por Ramo</h2>
-      <p>GMM, Autos, Vida y Da&ntilde;os &mdash; dimensi&oacute;n, l&iacute;deres, presiones y tendencias.</p>
-    </div>
-
-    <!-- GMM -->
-    <h3 style="margin-top:2.5rem">GMM &mdash; Gastos M&eacute;dicos Mayores</h3>
-    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">$169,654M</div>
-        <div class="kpi-label" style="color:var(--graphite)">Prima A&amp;E (2024)</div>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">+13.8%</div>
-        <div class="kpi-label" style="color:var(--graphite)">Crecimiento YoY</div>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">~14M</div>
-        <div class="kpi-label" style="color:var(--graphite)">Personas aseguradas</div>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">10%</div>
-        <div class="kpi-label" style="color:var(--graphite)">Penetraci&oacute;n poblaci&oacute;n</div>
-      </div>
-    </div>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Segmento</th><th>#1</th><th>#2</th><th>#3</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>GMM Individual</strong></td><td>GNP (~29.7%)</td><td>AXA (~22%)</td><td>MetLife (~11%)</td></tr>
-          <tr><td><strong>GMM Colectivo</strong></td><td>MetLife (~24.7%)</td><td>GNP (~23.9%)</td><td>AXA (~16.2%)</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="callout">
-      <p><strong>Presi&oacute;n cr&iacute;tica:</strong> Inflaci&oacute;n m&eacute;dica de <strong>14.9%</strong> (2025) vs. inflaci&oacute;n general 3.9%. Siniestralidad subi&oacute; de 70.8% a 74%. Siniestros catastr&oacute;ficos crecieron +41% en casos y +68% en monto. ~3 millones de personas podr&iacute;an cancelar su p&oacute;liza por costo en 2026.</p>
-    </div>
-
-    <!-- Autos -->
-    <h3>Autos</h3>
-    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">$193,217M</div>
-        <div class="kpi-label" style="color:var(--graphite)">Prima directa (2024)</div>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">+26.3%</div>
-        <div class="kpi-label" style="color:var(--graphite)">Crecimiento YoY</div>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">94.9%</div>
-        <div class="kpi-label" style="color:var(--graphite)">&Iacute;ndice combinado</div>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">34.1%</div>
-        <div class="kpi-label" style="color:var(--graphite)">Qu&aacute;litas (l&iacute;der)</div>
-      </div>
-    </div>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>#</th><th>Aseguradora</th><th>Market share</th></tr>
-        </thead>
-        <tbody>
-          <tr class="highlight-row"><td>1</td><td><strong>Qu&aacute;litas</strong></td><td><strong>34.1%</strong></td></tr>
-          <tr><td>2</td><td>AXA</td><td>~10&ndash;12%</td></tr>
-          <tr><td>3</td><td>GNP</td><td>~8&ndash;9%</td></tr>
-          <tr><td>4</td><td>HDI</td><td>~7&ndash;8%</td></tr>
-          <tr><td>5</td><td>Chubb</td><td>~5&ndash;6%</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p><strong>Tendencias:</strong> Telem&aacute;tica / UBI, autos el&eacute;ctricos (primas 15&ndash;30% m&aacute;s altas), RC obligatoria se expande a m&aacute;s estados, canal digital en aceleraci&oacute;n.</p>
-
-    <!-- Vida -->
-    <h3>Vida</h3>
-    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">$375,511M</div>
-        <div class="kpi-label" style="color:var(--graphite)">Prima directa (2024)</div>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">41.3%</div>
-        <div class="kpi-label" style="color:var(--graphite)">% del sector (mayor ramo)</div>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">~58M</div>
-        <div class="kpi-label" style="color:var(--graphite)">P&oacute;lizas vigentes</div>
-      </div>
-      <div class="card" style="text-align:center">
-        <div class="kpi-value" style="color:var(--navy);font-size:1.4rem">~25%</div>
-        <div class="kpi-label" style="color:var(--graphite)">Penetraci&oacute;n poblaci&oacute;n</div>
-      </div>
-    </div>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>#</th><th>Aseguradora</th><th>Segmento dominante</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>1</td><td><strong>MetLife</strong> (~16&ndash;17%)</td><td>Individual + grupal</td></tr>
-          <tr><td>2</td><td><strong>BBVA Seguros</strong> (~14&ndash;15%)</td><td>Bancaseguros</td></tr>
-          <tr><td>3</td><td><strong>GNP</strong> (~10&ndash;11%)</td><td>Individual premium</td></tr>
-          <tr><td>4</td><td><strong>Citibanamex</strong> (~10%)</td><td>Bancaseguros</td></tr>
-          <tr><td>5</td><td><strong>Banorte</strong> (~8&ndash;9%)</td><td>Bancaseguros</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p><strong>Canal dominante:</strong> Bancaseguros (~40&ndash;45% de la prima). <strong>Tendencias:</strong> Seguros h&iacute;bridos (vida + ahorro + inversi&oacute;n), riders de enfermedades graves como est&aacute;ndar, suscripci&oacute;n digital simplificada.</p>
-
-    <!-- Daños -->
-    <h3>Da&ntilde;os (sin Autos)</h3>
-    <p><strong>Prima directa:</strong> $131,819 M MXN (14.5% del sector). Mercado <strong>m&aacute;s fragmentado</strong> que los dem&aacute;s ramos. Principales jugadores: AXA, Chubb, Zurich, GNP, Mapfre, HDI. Distribuido v&iacute;a <strong>brokers especializados</strong>. RC es el subramo de mayor inter&eacute;s estrat&eacute;gico.</p>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- PARTE IV — Gap Analysis -->
-  <!-- ═══════════════════════════════════════════════ -->
-  <section class="section" id="gap">
-    <div class="part-header">
-      <div class="section-label">Parte IV</div>
-      <h2>Gap Analysis: Sura M&eacute;xico vs. Mercado</h2>
-      <p>Evaluaci&oacute;n producto por producto del portafolio de Sura frente a la oferta del mercado.</p>
-    </div>
-
-    <h3 style="margin-top:2.5rem">Resumen del Portafolio</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Ramo</th><th>Estado</th><th>Comentario</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>GMM</strong></td><td><span class="badge badge-ok">&#10003; Competitivo</span></td><td>Ala Azul / Ala Azul Plus. SA m&aacute;x $50M</td></tr>
-          <tr><td><strong>Autos</strong></td><td><span class="badge badge-ok">&#10003; Competitivo</span></td><td>4 niveles + flotillas. Participaci&oacute;n &lt;3%</td></tr>
-          <tr><td><strong>Vida</strong></td><td><span class="badge badge-warn">&#9888; Presente</span></td><td>Sin vida cr&eacute;dito ni canal bancario</td></tr>
-          <tr><td><strong>Da&ntilde;os tradicionales</strong></td><td><span class="badge badge-ok">&#10003; S&oacute;lido</span></td><td>Plan Empresario SURA integrado</td></tr>
-          <tr><td><strong>RC General</strong></td><td><span class="badge badge-ok">&#10003; Tiene</span></td><td>RC Da&ntilde;os a Terceros con multirriesgo</td></tr>
-          <tr><td><strong>RC Profesional (E&amp;O)</strong></td><td><span class="badge badge-no">&#10007; No detectado</span></td><td>Brecha cr&iacute;tica</td></tr>
-          <tr><td><strong>D&amp;O</strong></td><td><span class="badge badge-warn">&#9888; Limitado</span></td><td>No catalogado p&uacute;blicamente</td></tr>
-          <tr><td><strong>RC Producto</strong></td><td><span class="badge badge-warn">&#9888; Limitado</span></td><td>Solo endoso dentro de RC General</td></tr>
-          <tr><td><strong>RC Ambiental</strong></td><td><span class="badge badge-warn">&#9888; Limitado</span></td><td>Solo contaminaci&oacute;n accidental</td></tr>
-          <tr><td><strong>RC Cyber</strong></td><td><span class="badge badge-ok">&#10003; Completo</span></td><td>1st + 3rd party &mdash; ventaja competitiva</td></tr>
-          <tr><td><strong>CAR/EAR</strong></td><td><span class="badge badge-ok">&#10003; Tiene</span></td><td>Seguro de Ingenier&iacute;a</td></tr>
-          <tr><td><strong>RC Transporte</strong></td><td><span class="badge badge-ok">&#10003; Tiene</span></td><td>Cobertura de carga en tr&aacute;nsito</td></tr>
-          <tr><td><strong>RC Patronal</strong></td><td><span class="badge badge-warn">&#9888; Limitado</span></td><td>Como endoso, no producto dedicado</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Brechas Estrat&eacute;gicas</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Brecha</th><th>Prioridad</th><th>Oportunidad</th></tr>
-        </thead>
-        <tbody>
-          <tr class="highlight-row"><td><strong>E&amp;O (RC Profesional)</strong></td><td><span class="badge badge-no">Alta</span></td><td>Mercado en crecimiento; pocas opciones nacionales</td></tr>
-          <tr class="highlight-row"><td><strong>D&amp;O dedicado</strong></td><td><span class="badge badge-no">Alta</span></td><td>Gobierno corporativo impulsa; PyMEs sin opciones</td></tr>
-          <tr><td><strong>RC Ambiental completa</strong></td><td><span class="badge badge-warn">Media</span></td><td>LFRA requiere seguro; solo cubre accidental</td></tr>
-          <tr><td><strong>GMM SA ilimitada</strong></td><td><span class="badge badge-warn">Media</span></td><td>Competir con GNP y AXA en segmento premium</td></tr>
-          <tr><td><strong>RC Patronal dedicada</strong></td><td><span class="badge badge-warn">Media</span></td><td>Litigiosidad laboral creciente</td></tr>
-          <tr><td>Autos el&eacute;ctricos</td><td><span class="badge" style="background:#f1f5f9;color:var(--graphite)">Baja</span></td><td>Nicho emergente</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h3>Ventajas Competitivas de Sura</h3>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-tag tag-maduro">Fortaleza</div>
-        <div class="card-title">Presencia en PyMEs</div>
-        <p>Segmento desatendido en RC especializado donde Sura ya tiene base de clientes.</p>
-      </div>
-      <div class="card">
-        <div class="card-tag tag-maduro">Fortaleza</div>
-        <div class="card-title">Plan Empresario SURA</div>
-        <p>Paquete multirriesgo integrado &mdash; ventaja vs productos standalone.</p>
-      </div>
-      <div class="card">
-        <div class="card-tag tag-maduro">Fortaleza</div>
-        <div class="card-title">Producto Cyber Completo</div>
-        <p>Sorprendentemente completo (1st + 3rd party) vs competidores nacionales.</p>
-      </div>
-      <div class="card">
-        <div class="card-tag tag-desarrollo">Oportunidad</div>
-        <div class="card-title">Marca Regional LATAM</div>
-        <p>Credibilidad para multinacionales del nearshoring que buscan cobertura regional.</p>
-      </div>
-      <div class="card">
-        <div class="card-tag tag-desarrollo">Oportunidad</div>
-        <div class="card-title">Cross-selling</div>
-        <p>Base de clientes en Da&ntilde;os/Autos como canal natural para RC especializado.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════════ -->
-  <!-- Recomendaciones -->
-  <!-- ═══════════════════════════════════════════════ -->
-  <section class="section" id="recomendaciones">
-    <div class="section-label">Conclusi&oacute;n</div>
-    <h2>Recomendaciones Estrat&eacute;gicas</h2>
-
-    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-      <div class="card" style="border-left: 3px solid var(--teal);">
-        <div class="card-tag tag-maduro">Prioridad 1</div>
-        <div class="card-title">Lanzar E&amp;O (RC Profesional)</div>
-        <p>Mercado en crecimiento con pocas opciones nacionales. Sura tiene la base de clientes PyME para distribuirlo.</p>
-      </div>
-      <div class="card" style="border-left: 3px solid var(--teal);">
-        <div class="card-tag tag-maduro">Prioridad 1</div>
-        <div class="card-title">Desarrollar D&amp;O para PyMEs</div>
-        <p>Nicho sin competencia real. Las multinacionales (AIG, Chubb) apuntan a corporativos grandes.</p>
-      </div>
-      <div class="card" style="border-left: 3px solid #2563EB;">
-        <div class="card-tag tag-desarrollo">Prioridad 2</div>
-        <div class="card-title">Capitalizar ventaja en Cyber</div>
-        <p>Sura ya tiene producto completo. Posicionarlo agresivamente ante el crecimiento de 30% anual.</p>
-      </div>
-      <div class="card" style="border-left: 3px solid #2563EB;">
-        <div class="card-tag tag-desarrollo">Prioridad 2</div>
-        <div class="card-title">Ampliar RC Ambiental</div>
-        <p>Incluir contaminaci&oacute;n gradual para cumplir con LFRA. Mercado de USD 15&ndash;30M con baja competencia.</p>
-      </div>
-      <div class="card" style="border-left: 3px solid #2563EB;">
-        <div class="card-tag tag-desarrollo">Prioridad 2</div>
-        <div class="card-title">Cross-selling RC hacia base PyME</div>
-        <p>La base de clientes de Da&ntilde;os/Autos es el canal natural para vender RC especializado sin costos de adquisici&oacute;n adicionales.</p>
-      </div>
-      <div class="card" style="border-left: 3px solid var(--silver);">
-        <div class="card-tag" style="background:#f1f5f9;color:var(--graphite)">Monitorear</div>
-        <div class="card-title">Inflaci&oacute;n m&eacute;dica en GMM</div>
-        <p>El ramo enfrenta presiones estructurales. Considerar productos de indemnizaci&oacute;n como alternativa de bajo costo.</p>
-      </div>
-    </div>
-  </section>
+  <div class="callout">
+    <p><strong>Tesis estrat&eacute;gica:</strong> La ventaja de Sura no est&aacute; en competir con Chubb o AIG en el segmento corporativo grande (donde tienen capacidad y experiencia superiores), sino en <strong>democratizar coberturas especializadas de RC para el segmento PyME-mediano</strong>, donde Sura ya tiene canal, marca y base de clientes. El Seguro de Protecci&oacute;n Cibern&eacute;tica demuestra que Sura puede hacerlo. Replicar esa f&oacute;rmula en E&amp;O y D&amp;O es el siguiente paso natural.</p>
+  </div>
+</section>
 
 </div>
 
