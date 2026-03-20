@@ -282,6 +282,24 @@
     .rc-block .rc-meta-item strong { display: block; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--graphite); margin-bottom: 0.15rem; }
     .rc-block .rc-meta-item span { font-weight: 600; color: var(--navy); }
 
+    /* ── Act Dividers ── */
+    .act-divider {
+      background: var(--navy); margin: 4rem -2rem 0; padding: 2.5rem 2rem;
+      display: flex; align-items: center; gap: 1.5rem;
+    }
+    .act-divider .act-num {
+      font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 0.72rem;
+      text-transform: uppercase; letter-spacing: 0.15em; color: var(--teal);
+      border: 1.5px solid var(--teal); border-radius: 4px; padding: 0.3rem 0.75rem;
+      white-space: nowrap;
+    }
+    .act-divider .act-title {
+      font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 1.3rem; color: #fff;
+    }
+    .act-divider .act-sub {
+      color: var(--silver); font-size: 0.88rem; margin-top: 0.25rem;
+    }
+
     /* ── Footer ── */
     footer {
       background: var(--navy); padding: 3.5rem 2rem; text-align: center; margin-top: 2rem;
@@ -318,7 +336,7 @@
   <div class="nav-inner">
     <div class="nav-brand"><img src="logo.svg" alt="Aldebaran" class="nav-logo">Aldebaran<span>.</span> Consulting</div>
     <ul class="nav-links">
-      <li><a href="#resumen">Resumen Ejecutivo</a></li>
+      <li><a href="#resumen">Resumen</a></li>
       <li><a href="#macro">Macro</a></li>
       <li><a href="#competencia">Competencia</a></li>
       <li><a href="#capacidades">Capacidades</a></li>
@@ -328,6 +346,7 @@
       <li><a href="#gap">Sura</a></li>
       <li><a href="#playbook">Playbook</a></li>
       <li><a href="#slas">SLAs</a></li>
+      <li><a href="#conclusiones">Cierre</a></li>
     </ul>
   </div>
 </nav>
@@ -414,6 +433,12 @@
     <p><strong>Implicaci&oacute;n estrat&eacute;gica central:</strong> M&eacute;xico tiene un mercado asegurador grande pero subpenetrado, con oportunidades desproporcionadas en l&iacute;neas especializadas de baja adopci&oacute;n. La competencia se est&aacute; sofisticando &mdash; ya no basta con tener el producto, hay que tener la capacidad operativa, tecnol&oacute;gica y de suscripci&oacute;n para entregarlo. Para Sura, la decisi&oacute;n no es <em>&ldquo;&iquest;qu&eacute; lanzo?&rdquo;</em> sino <em>&ldquo;&iquest;qu&eacute; capacidades construyo para ganar en el segmento donde ya tengo posici&oacute;n?&rdquo;</em></p>
   </div>
 </section>
+
+<!-- ═══ ACTO I ═══ -->
+<div class="act-divider">
+  <div><div class="act-num">Acto I</div></div>
+  <div><div class="act-title">El Mercado</div><div class="act-sub">Dimensi&oacute;n, estructura competitiva, capacidades y din&aacute;mica del sector asegurador mexicano.</div></div>
+</div>
 
 <!-- ════════════════════════════════════════ -->
 <!-- PARTE I — PANORAMA MACRO -->
@@ -553,83 +578,6 @@
     <div class="card"><div class="card-title">Digitalizaci&oacute;n</div><p>Crecimiento del canal digital, especialmente en Autos y Vida. Bajo impacto en RC (requiere suscripci&oacute;n especializada).</p></div>
   </div>
 
-  <!-- ─── CONDUSEF ─── -->
-  <h3>Calidad de Servicio: CONDUSEF e IDATU</h3>
-  <div class="callout" style="margin-bottom:1.5rem">
-    <p><strong>&iquest;Qu&eacute; es la CONDUSEF?</strong> La Comisi&oacute;n Nacional para la Protecci&oacute;n y Defensa de los Usuarios de Servicios Financieros es el organismo p&uacute;blico que recibe quejas de asegurados, media en controversias y publica indicadores de desempe&ntilde;o de las aseguradoras. Su herramienta principal es el <strong>IDATU</strong> (Índice de Desempe&ntilde;o de Atenci&oacute;n a Usuarios), que califica de 0 a 10 la calidad con que cada aseguradora atiende reclamaciones.</p>
-  </div>
-
-  <h4>IDATU &mdash; Ranking de Aseguradoras (3T 2025)</h4>
-  <p>Promedio del sector: <strong>9.13 / 10</strong>. Las aseguradoras relevantes para este estudio se ubican as&iacute;:</p>
-
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr><th>Aseguradora</th><th>IDATU</th><th>Evaluaci&oacute;n</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Chubb</td><td><strong>9.95</strong></td><td><span class="badge badge-ok">Excelente</span></td></tr>
-        <tr><td>BBVA Seguros</td><td><strong>9.94</strong></td><td><span class="badge badge-ok">Excelente</span></td></tr>
-        <tr><td>HDI</td><td><strong>9.86</strong></td><td><span class="badge badge-ok">Muy bueno</span></td></tr>
-        <tr><td>Promedio sector</td><td>9.13</td><td><span class="badge badge-warn">Referencia</span></td></tr>
-        <tr><td>Zurich</td><td><strong>7.48</strong></td><td><span class="badge badge-warn">Por debajo</span></td></tr>
-        <tr class="highlight-row"><td><strong>Sura</strong></td><td><strong>5.68</strong></td><td><span class="badge badge-no">M&aacute;s bajo del sector</span></td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <h4>Reclamaciones por Aseguradora (Ene&ndash;Dic 2024)</h4>
-  <p>Distribuci&oacute;n de las reclamaciones recibidas por CONDUSEF en el sector asegurador:</p>
-
-  <div class="chart-container">
-    <div class="chart-title">Participaci&oacute;n en reclamaciones (%)</div>
-    <div class="bar-chart">
-      <div class="bar-row"><div class="bar-label">Qu&aacute;litas</div><div class="bar-track"><div class="bar-fill navy" style="width:63%"><span>19%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">GNP</div><div class="bar-track"><div class="bar-fill navy" style="width:53%"><span>16%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">Chubb</div><div class="bar-track"><div class="bar-fill slate" style="width:33%"><span>10%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">BBVA</div><div class="bar-track"><div class="bar-fill slate" style="width:30%"><span>9%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">AXA</div><div class="bar-track"><div class="bar-fill slate" style="width:27%"><span>8%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">HDI</div><div class="bar-track"><div class="bar-fill slate" style="width:20%"><span>6%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">Mapfre</div><div class="bar-track"><div class="bar-fill slate" style="width:17%"><span>5%</span></div></div></div>
-    </div>
-    <p style="font-size:0.82rem;margin-top:0.75rem;color:var(--graphite)">Nota: mayor volumen de quejas no implica peor servicio &mdash; correlaciona con n&uacute;mero de p&oacute;lizas emitidas. El IDATU normaliza por volumen.</p>
-  </div>
-
-  <h4>Principales Causas de Reclamaci&oacute;n</h4>
-  <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-    <div class="card" style="text-align:center">
-      <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.8rem;color:var(--navy)">34%</div>
-      <p style="font-size:0.85rem;margin:0">Negativa en pago de indemnizaci&oacute;n</p>
-    </div>
-    <div class="card" style="text-align:center">
-      <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.8rem;color:var(--navy)">19%</div>
-      <p style="font-size:0.85rem;margin:0">Inconformidad con tiempo de reparaci&oacute;n</p>
-    </div>
-    <div class="card" style="text-align:center">
-      <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.8rem;color:var(--navy)">14%</div>
-      <p style="font-size:0.85rem;margin:0">Inconformidad con tiempo de pago</p>
-    </div>
-    <div class="card" style="text-align:center">
-      <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.8rem;color:var(--navy)">11%</div>
-      <p style="font-size:0.85rem;margin:0">Inconformidad con reparaci&oacute;n del bien</p>
-    </div>
-  </div>
-
-  <h4>Resoluci&oacute;n Favorable al Usuario</h4>
-  <p>Porcentaje de reclamaciones resueltas a favor del asegurado por aseguradora:</p>
-  <div class="chart-container">
-    <div class="chart-title">Resoluciones a favor del usuario (%)</div>
-    <div class="bar-chart">
-      <div class="bar-row"><div class="bar-label">Mapfre</div><div class="bar-track"><div class="bar-fill teal" style="width:64%"><span>32%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">Afirme</div><div class="bar-track"><div class="bar-fill teal" style="width:48%"><span>24%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">Chubb</div><div class="bar-track"><div class="bar-fill slate" style="width:28%"><span>14%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">AXA</div><div class="bar-track"><div class="bar-fill slate" style="width:26%"><span>13%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">BBVA</div><div class="bar-track"><div class="bar-fill slate" style="width:22%"><span>11%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">HDI</div><div class="bar-track"><div class="bar-fill navy" style="width:14%"><span>7%</span></div></div></div>
-      <div class="bar-row"><div class="bar-label">GNP</div><div class="bar-track"><div class="bar-fill navy" style="width:14%"><span>7%</span></div></div></div>
-    </div>
-  </div>
-  <p style="font-size:0.85rem;color:var(--graphite)"><em>Fuente: CONDUSEF, Bur&oacute; de Entidades Financieras e IDATU, 3T 2025. Datos de reclamaciones: Ene&ndash;Dic 2024.</em></p>
 </section>
 
 <!-- ════════════════════════════════════════ -->
@@ -768,10 +716,94 @@
     <p><strong>Conclusi&oacute;n:</strong> <strong>Sura tiene buen acceso al canal agente PyME pero no al broker corporativo.</strong> Para productos como E&amp;O y D&amp;O necesita: (a) crear productos lo suficientemente simples para venderse por agente, o (b) desarrollar relaciones con brokers especializados &mdash; o ambas.</p>
   </div>
 
+  <!-- ─── CONDUSEF / IDATU ─── -->
+  <h3>Calidad de Servicio: CONDUSEF e IDATU</h3>
+  <div class="callout" style="margin-bottom:1.5rem">
+    <p><strong>&iquest;Qu&eacute; es la CONDUSEF?</strong> La Comisi&oacute;n Nacional para la Protecci&oacute;n y Defensa de los Usuarios de Servicios Financieros es el organismo p&uacute;blico que recibe quejas de asegurados, media en controversias y publica indicadores de desempe&ntilde;o de las aseguradoras. Su herramienta principal es el <strong>IDATU</strong> (&Iacute;ndice de Desempe&ntilde;o de Atenci&oacute;n a Usuarios), que califica de 0 a 10 la calidad con que cada aseguradora atiende reclamaciones.</p>
+  </div>
+
+  <h4>IDATU &mdash; Ranking de Aseguradoras (3T 2025)</h4>
+  <p>Promedio del sector: <strong>9.13 / 10</strong>. Las aseguradoras relevantes para este estudio se ubican as&iacute;:</p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Aseguradora</th><th>IDATU</th><th>Evaluaci&oacute;n</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Chubb</td><td><strong>9.95</strong></td><td><span class="badge badge-ok">Excelente</span></td></tr>
+        <tr><td>BBVA Seguros</td><td><strong>9.94</strong></td><td><span class="badge badge-ok">Excelente</span></td></tr>
+        <tr><td>HDI</td><td><strong>9.86</strong></td><td><span class="badge badge-ok">Muy bueno</span></td></tr>
+        <tr><td>Promedio sector</td><td>9.13</td><td><span class="badge badge-warn">Referencia</span></td></tr>
+        <tr><td>Zurich</td><td><strong>7.48</strong></td><td><span class="badge badge-warn">Por debajo</span></td></tr>
+        <tr class="highlight-row"><td><strong>Sura</strong></td><td><strong>5.68</strong></td><td><span class="badge badge-no">M&aacute;s bajo del sector</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>Reclamaciones por Aseguradora (Ene&ndash;Dic 2024)</h4>
+  <p>Distribuci&oacute;n de las reclamaciones recibidas por CONDUSEF en el sector asegurador:</p>
+
+  <div class="chart-container">
+    <div class="chart-title">Participaci&oacute;n en reclamaciones (%)</div>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">Qu&aacute;litas</div><div class="bar-track"><div class="bar-fill navy" style="width:63%"><span>19%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">GNP</div><div class="bar-track"><div class="bar-fill navy" style="width:53%"><span>16%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Chubb</div><div class="bar-track"><div class="bar-fill slate" style="width:33%"><span>10%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">BBVA</div><div class="bar-track"><div class="bar-fill slate" style="width:30%"><span>9%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">AXA</div><div class="bar-track"><div class="bar-fill slate" style="width:27%"><span>8%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">HDI</div><div class="bar-track"><div class="bar-fill slate" style="width:20%"><span>6%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Mapfre</div><div class="bar-track"><div class="bar-fill slate" style="width:17%"><span>5%</span></div></div></div>
+    </div>
+    <p style="font-size:0.82rem;margin-top:0.75rem;color:var(--graphite)">Nota: mayor volumen de quejas no implica peor servicio &mdash; correlaciona con n&uacute;mero de p&oacute;lizas emitidas. El IDATU normaliza por volumen.</p>
+  </div>
+
+  <h4>Principales Causas de Reclamaci&oacute;n</h4>
+  <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+    <div class="card" style="text-align:center">
+      <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.8rem;color:var(--navy)">34%</div>
+      <p style="font-size:0.85rem;margin:0">Negativa en pago de indemnizaci&oacute;n</p>
+    </div>
+    <div class="card" style="text-align:center">
+      <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.8rem;color:var(--navy)">19%</div>
+      <p style="font-size:0.85rem;margin:0">Inconformidad con tiempo de reparaci&oacute;n</p>
+    </div>
+    <div class="card" style="text-align:center">
+      <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.8rem;color:var(--navy)">14%</div>
+      <p style="font-size:0.85rem;margin:0">Inconformidad con tiempo de pago</p>
+    </div>
+    <div class="card" style="text-align:center">
+      <div style="font-family:'Manrope',sans-serif;font-weight:800;font-size:1.8rem;color:var(--navy)">11%</div>
+      <p style="font-size:0.85rem;margin:0">Inconformidad con reparaci&oacute;n del bien</p>
+    </div>
+  </div>
+
+  <h4>Resoluci&oacute;n Favorable al Usuario</h4>
+  <p>Porcentaje de reclamaciones resueltas a favor del asegurado por aseguradora:</p>
+  <div class="chart-container">
+    <div class="chart-title">Resoluciones a favor del usuario (%)</div>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">Mapfre</div><div class="bar-track"><div class="bar-fill teal" style="width:64%"><span>32%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Afirme</div><div class="bar-track"><div class="bar-fill teal" style="width:48%"><span>24%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">Chubb</div><div class="bar-track"><div class="bar-fill slate" style="width:28%"><span>14%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">AXA</div><div class="bar-track"><div class="bar-fill slate" style="width:26%"><span>13%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">BBVA</div><div class="bar-track"><div class="bar-fill slate" style="width:22%"><span>11%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">HDI</div><div class="bar-track"><div class="bar-fill navy" style="width:14%"><span>7%</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">GNP</div><div class="bar-track"><div class="bar-fill navy" style="width:14%"><span>7%</span></div></div></div>
+    </div>
+  </div>
+  <p style="font-size:0.85rem;color:var(--graphite)"><em>Fuente: CONDUSEF, Bur&oacute; de Entidades Financieras e IDATU, 3T 2025. Datos de reclamaciones: Ene&ndash;Dic 2024.</em></p>
+
   <div class="callout" style="margin-top:1.75rem">
     <p><strong>S&iacute;ntesis de capacidades:</strong> El sector asegurador mexicano est&aacute; evolucionando de una competencia basada en producto y precio hacia una basada en <strong>capacidades operativas, tecnol&oacute;gicas y de servicio</strong>. Los ganadores por ramo no son necesariamente los que tienen m&aacute;s productos, sino los que mejor ejecutan en su segmento. <strong>La implicaci&oacute;n para cualquier aseguradora que quiera expandir su portafolio es clara: primero las capacidades, luego los productos.</strong></p>
   </div>
 </section>
+
+<!-- ═══ ACTO II ═══ -->
+<div class="act-divider">
+  <div><div class="act-num">Acto II</div></div>
+  <div><div class="act-title">La Oportunidad</div><div class="act-sub">An&aacute;lisis por ramo, deep-dive en Da&ntilde;os y Responsabilidad Civil &mdash; donde est&aacute; la brecha de penetraci&oacute;n.</div></div>
+</div>
 
 <!-- ════════════════════════════════════════ -->
 <!-- PARTE IV — ANÁLISIS POR RAMO -->
@@ -1138,6 +1170,12 @@
   <span class="dot dot-m" style="display:inline-flex;width:18px;height:18px;font-size:0.6rem;vertical-align:middle;margin-right:4px">M</span> Maduro</p>
 </section>
 
+<!-- ═══ ACTO III ═══ -->
+<div class="act-divider">
+  <div><div class="act-num">Acto III</div></div>
+  <div><div class="act-title">El Caso Sura</div><div class="act-sub">Posicionamiento, brechas, plan de acci&oacute;n y benchmarks operativos.</div></div>
+</div>
+
 <!-- ════════════════════════════════════════ -->
 <!-- PARTE VII — ANÁLISIS ESTRATÉGICO SURA -->
 <!-- ════════════════════════════════════════ -->
@@ -1427,12 +1465,12 @@
   <p>Los 14 productos evaluados incluyen: Responsabilidad Civil, Empresarial, Equipo Electr&oacute;nico, Rotura de Maquinaria, Cascos y Embarcaciones, Incendio, Paquete Familiar, Transporte de Carga, Equipo de Contratistas, Calderas, Robo, Montaje, Dinero y Valores, y Obra Civil.</p>
 
   <div class="callout" style="margin-top:1rem">
-    <p><strong>Nota metodol&oacute;gica:</strong> La muestra de 280 agentes fue seleccionada entre profesionales especializados en Da&ntilde;os en las principales plazas del pa&iacute;s. Dado que HDI es la aseguradora con mayor penetraci&oacute;n en el canal agente para este ramo (84% de menciones como primera opci&oacute;n), una proporci&oacute;n significativa de los encuestados opera regularmente con HDI. Esto refleja la realidad del mercado &mdash; no un sesgo muestral &mdash; y permite analizar con mayor profundidad los tiempos de servicio del l&iacute;der frente a sus competidores.</p>
+    <p><strong>Nota metodol&oacute;gica:</strong> La muestra de 280 agentes fue seleccionada entre profesionales especializados en Da&ntilde;os en las principales plazas del pa&iacute;s. La distribuci&oacute;n de menciones por aseguradora refleja la preferencia natural del canal agente &mdash; no un sesgo muestral.</p>
   </div>
 
   <!-- ─── Top Aseguradoras: Primera cotizada ─── -->
   <h3>Aseguradora Preferida por Producto (Primera Cotizada)</h3>
-  <p>El levantamiento revela qu&eacute; aseguradora eligen primero los agentes al cotizar cada producto de Da&ntilde;os. HDI domina en la mayor&iacute;a de los productos, con penetraci&oacute;n del <strong>84%</strong> en menciones totales.</p>
+  <p>El levantamiento revela qu&eacute; aseguradora eligen primero los agentes al cotizar cada producto de Da&ntilde;os.</p>
 
   <div class="table-wrap">
     <table>
@@ -1440,28 +1478,28 @@
         <tr><th>Producto</th><th>HDI</th><th>Chubb</th><th>GMX</th><th>AXA</th><th>Mapfre</th><th>Seg. Atlas</th></tr>
       </thead>
       <tbody>
-        <tr><td>Responsabilidad Civil</td><td><strong>55%</strong></td><td>15%</td><td>13%</td><td>13%</td><td>5%</td><td>0%</td></tr>
-        <tr><td>Empresarial</td><td><strong>58%</strong></td><td>10%</td><td>3%</td><td>18%</td><td>5%</td><td>8%</td></tr>
-        <tr><td>Equipo Electr&oacute;nico</td><td><strong>66%</strong></td><td>5%</td><td>0%</td><td>24%</td><td>2%</td><td>2%</td></tr>
-        <tr><td>Rotura de Maquinaria</td><td><strong>83%</strong></td><td>8%</td><td>3%</td><td>8%</td><td>0%</td><td>0%</td></tr>
-        <tr><td>Cascos y Embarcaciones</td><td><strong>67%</strong></td><td>9%</td><td>9%</td><td>6%</td><td>6%</td><td>3%</td></tr>
-        <tr><td>Incendio</td><td><strong>55%</strong></td><td>5%</td><td>3%</td><td>30%</td><td>3%</td><td>5%</td></tr>
-        <tr><td>Paquete Familiar</td><td><strong>56%</strong></td><td>15%</td><td>0%</td><td>17%</td><td>10%</td><td>2%</td></tr>
-        <tr><td>Transporte de Carga</td><td><strong>71%</strong></td><td>13%</td><td>0%</td><td>7%</td><td>7%</td><td>2%</td></tr>
-        <tr><td>Equipo de Contratistas</td><td><strong>67%</strong></td><td>5%</td><td>7%</td><td>14%</td><td>5%</td><td>2%</td></tr>
-        <tr><td>Calderas</td><td><strong>75%</strong></td><td>0%</td><td>13%</td><td>13%</td><td>0%</td><td>0%</td></tr>
-        <tr><td>Robo</td><td><strong>73%</strong></td><td>5%</td><td>0%</td><td>15%</td><td>8%</td><td>0%</td></tr>
-        <tr><td>Montaje</td><td><strong>60%</strong></td><td>20%</td><td>0%</td><td>20%</td><td>0%</td><td>0%</td></tr>
-        <tr><td>Dinero y Valores</td><td><strong>88%</strong></td><td>0%</td><td>0%</td><td>6%</td><td>6%</td><td>0%</td></tr>
+        <tr><td>Responsabilidad Civil</td><td>55%</td><td>15%</td><td>13%</td><td>13%</td><td>5%</td><td>0%</td></tr>
+        <tr><td>Empresarial</td><td>58%</td><td>10%</td><td>3%</td><td>18%</td><td>5%</td><td>8%</td></tr>
+        <tr><td>Equipo Electr&oacute;nico</td><td>66%</td><td>5%</td><td>0%</td><td>24%</td><td>2%</td><td>2%</td></tr>
+        <tr><td>Rotura de Maquinaria</td><td>83%</td><td>8%</td><td>3%</td><td>8%</td><td>0%</td><td>0%</td></tr>
+        <tr><td>Cascos y Embarcaciones</td><td>67%</td><td>9%</td><td>9%</td><td>6%</td><td>6%</td><td>3%</td></tr>
+        <tr><td>Incendio</td><td>55%</td><td>5%</td><td>3%</td><td>30%</td><td>3%</td><td>5%</td></tr>
+        <tr><td>Paquete Familiar</td><td>56%</td><td>15%</td><td>0%</td><td>17%</td><td>10%</td><td>2%</td></tr>
+        <tr><td>Transporte de Carga</td><td>71%</td><td>13%</td><td>0%</td><td>7%</td><td>7%</td><td>2%</td></tr>
+        <tr><td>Equipo de Contratistas</td><td>67%</td><td>5%</td><td>7%</td><td>14%</td><td>5%</td><td>2%</td></tr>
+        <tr><td>Calderas</td><td>75%</td><td>0%</td><td>13%</td><td>13%</td><td>0%</td><td>0%</td></tr>
+        <tr><td>Robo</td><td>73%</td><td>5%</td><td>0%</td><td>15%</td><td>8%</td><td>0%</td></tr>
+        <tr><td>Montaje</td><td>60%</td><td>20%</td><td>0%</td><td>20%</td><td>0%</td><td>0%</td></tr>
+        <tr><td>Dinero y Valores</td><td>88%</td><td>0%</td><td>0%</td><td>6%</td><td>6%</td><td>0%</td></tr>
         <tr class="highlight-row"><td>Obra Civil</td><td>42%</td><td>15%</td><td>19%</td><td>19%</td><td>0%</td><td>4%</td></tr>
       </tbody>
     </table>
   </div>
-  <p style="font-size:0.88rem;color:var(--graphite)"><em>Nota: Obra Civil es el producto donde HDI tiene menor dominancia (42%), lo que representa una oportunidad de mejora. Dinero y Valores tiene la mayor concentraci&oacute;n (88%).</em></p>
+  <p style="font-size:0.88rem;color:var(--graphite)"><em>Fuente: Levantamiento cuantitativo, 280 agentes especializados en Da&ntilde;os, 464 casos.</em></p>
 
   <!-- ─── Penetración General ─── -->
-  <h3>Penetraci&oacute;n de Aseguradoras en Seguros de Da&ntilde;os</h3>
-  <p>Total de menciones por aseguradora en primera y segunda opci&oacute;n, en todo el abanico de seguros de Da&ntilde;os.</p>
+  <h3>Penetraci&oacute;n de Aseguradoras en Da&ntilde;os</h3>
+  <p>Total de menciones por aseguradora en primera y segunda opci&oacute;n de cotizaci&oacute;n, en todo el abanico de productos de Da&ntilde;os.</p>
 
   <div class="chart-container">
     <div class="chart-title">Penetraci&oacute;n por aseguradora (1ra + 2da menci&oacute;n)</div>
@@ -1476,8 +1514,8 @@
   </div>
 
   <!-- ─── Ranking Aseguradoras por Tiempos ─── -->
-  <h3>Ranking de Aseguradoras &mdash; Mejores Tiempos</h3>
-  <p>Comparativo global de tiempos promedio de cotizaci&oacute;n y emisi&oacute;n (d&iacute;as naturales). La <strong>moda</strong> refleja el valor m&aacute;s frecuente reportado por los agentes &mdash; es el dato de mayor relevancia pr&aacute;ctica.</p>
+  <h3>Tiempos por Aseguradora</h3>
+  <p>Comparativo de tiempos promedio de cotizaci&oacute;n y emisi&oacute;n en d&iacute;as naturales. La <strong>moda</strong> refleja el valor m&aacute;s frecuente reportado por los agentes.</p>
 
   <div class="table-wrap">
     <table>
@@ -1488,16 +1526,13 @@
         <tr><td><strong>1</strong></td><td><strong>Chubb</strong></td><td>1.74</td><td>1.00</td><td>2.05</td><td>2.00</td><td>42</td></tr>
         <tr><td><strong>2</strong></td><td><strong>Mapfre</strong></td><td>2.05</td><td>3.00</td><td>1.90</td><td>3.00</td><td>21</td></tr>
         <tr><td><strong>3</strong></td><td><strong>AXA</strong></td><td>2.32</td><td>0.50</td><td>1.96</td><td>0.50</td><td>70</td></tr>
-        <tr class="highlight-row"><td><strong>4</strong></td><td><strong>HDI</strong></td><td>2.90</td><td>3.00</td><td>2.49</td><td>3.00</td><td>300</td></tr>
+        <tr><td>4</td><td>HDI</td><td>2.90</td><td>3.00</td><td>2.49</td><td>3.00</td><td>300</td></tr>
         <tr><td><strong>5</strong></td><td><strong>GMX</strong></td><td>3.83</td><td>7.00</td><td>3.23</td><td>3.00</td><td>20</td></tr>
         <tr><td><strong>6</strong></td><td><strong>Seguros Atlas</strong></td><td>4.41</td><td>3.00</td><td>4.50</td><td>3.00</td><td>11</td></tr>
       </tbody>
     </table>
   </div>
 
-  <div class="callout">
-    <p><strong>Hallazgo clave:</strong> Chubb lidera en velocidad de cotizaci&oacute;n (1.74 d&iacute;as promedio), seguida de Mapfre y AXA. HDI, pese a ocupar el 4to lugar en tiempos (2.90 d&iacute;as), concentra el 65% de las primeras menciones (300 de 464), lo que sugiere que los agentes priorizan su relaci&oacute;n comercial con HDI incluso cuando hay opciones m&aacute;s r&aacute;pidas.</p>
-  </div>
 
   <!-- ─── Benchmark Cotización ─── -->
   <h3>Benchmark de Tiempos de Cotizaci&oacute;n</h3>
@@ -1506,7 +1541,7 @@
   <div class="two-col">
     <div class="chart-container">
       <div class="chart-title">Seguros T&eacute;cnicos &mdash; Cotizaci&oacute;n (d&iacute;as)</div>
-      <p style="font-size:0.85rem;color:var(--graphite);margin-bottom:1.25rem">Expectativa general: <strong>1.5 d&iacute;as</strong> | Promedio HDI: <strong>3.21 d&iacute;as</strong></p>
+      <p style="font-size:0.85rem;color:var(--graphite);margin-bottom:1.25rem">Expectativa general: <strong>1.5 d&iacute;as</strong> | Promedio l&iacute;der canal: <strong>3.21 d&iacute;as</strong></p>
       <div class="bar-chart">
         <div class="bar-row"><div class="bar-label">Eq. Electr&oacute;nico</div><div class="bar-track"><div class="bar-fill navy" style="width:29.6%"><span>2.96</span></div></div></div>
         <div class="bar-row"><div class="bar-label">Eq. Contratista</div><div class="bar-track"><div class="bar-fill navy" style="width:31.2%"><span>3.12</span></div></div></div>
@@ -1516,7 +1551,7 @@
     </div>
     <div class="chart-container">
       <div class="chart-title">Dem&aacute;s Productos &mdash; Cotizaci&oacute;n (d&iacute;as)</div>
-      <p style="font-size:0.85rem;color:var(--graphite);margin-bottom:1.25rem">Expectativa general: <strong>1.42 d&iacute;as</strong> | Promedio HDI: <strong>2.93 d&iacute;as</strong></p>
+      <p style="font-size:0.85rem;color:var(--graphite);margin-bottom:1.25rem">Expectativa general: <strong>1.42 d&iacute;as</strong> | Promedio l&iacute;der canal: <strong>2.93 d&iacute;as</strong></p>
       <div class="bar-chart">
         <div class="bar-row"><div class="bar-label">Empresa</div><div class="bar-track"><div class="bar-fill navy" style="width:35.2%"><span>3.52</span></div></div></div>
         <div class="bar-row"><div class="bar-label">Transp. Carga</div><div class="bar-track"><div class="bar-fill teal" style="width:23.7%"><span>2.37</span></div></div></div>
@@ -1539,7 +1574,7 @@
   <div class="two-col">
     <div class="chart-container">
       <div class="chart-title">Seguros T&eacute;cnicos &mdash; Emisi&oacute;n (d&iacute;as)</div>
-      <p style="font-size:0.85rem;color:var(--graphite);margin-bottom:1.25rem">Expectativa general: <strong>1.33 d&iacute;as</strong> | Promedio HDI: <strong>2.75 d&iacute;as</strong></p>
+      <p style="font-size:0.85rem;color:var(--graphite);margin-bottom:1.25rem">Expectativa general: <strong>1.33 d&iacute;as</strong> | Promedio l&iacute;der canal: <strong>2.75 d&iacute;as</strong></p>
       <div class="bar-chart">
         <div class="bar-row"><div class="bar-label">Eq. Electr&oacute;nico</div><div class="bar-track"><div class="bar-fill navy" style="width:24.4%"><span>2.44</span></div></div></div>
         <div class="bar-row"><div class="bar-label">Eq. Contratista</div><div class="bar-track"><div class="bar-fill navy" style="width:21.6%"><span>2.16</span></div></div></div>
@@ -1549,7 +1584,7 @@
     </div>
     <div class="chart-container">
       <div class="chart-title">Dem&aacute;s Productos &mdash; Emisi&oacute;n (d&iacute;as)</div>
-      <p style="font-size:0.85rem;color:var(--graphite);margin-bottom:1.25rem">Expectativa general: <strong>1.48 d&iacute;as</strong> | Promedio HDI: <strong>2.65 d&iacute;as</strong></p>
+      <p style="font-size:0.85rem;color:var(--graphite);margin-bottom:1.25rem">Expectativa general: <strong>1.48 d&iacute;as</strong> | Promedio l&iacute;der canal: <strong>2.65 d&iacute;as</strong></p>
       <div class="bar-chart">
         <div class="bar-row"><div class="bar-label">Empresa</div><div class="bar-track"><div class="bar-fill navy" style="width:33.5%"><span>3.35</span></div></div></div>
         <div class="bar-row"><div class="bar-label">Transp. Carga</div><div class="bar-track"><div class="bar-fill teal" style="width:20.6%"><span>2.06</span></div></div></div>
@@ -1566,8 +1601,8 @@
   </div>
 
   <!-- ─── L&iacute;der vs Competencia (Moda) ─── -->
-  <h3>Brecha del L&iacute;der vs Competencia &mdash; Moda de Cotizaci&oacute;n</h3>
-  <p>La <strong>moda</strong> (valor m&aacute;s frecuente) muestra d&oacute;nde HDI (l&iacute;der en Da&ntilde;os) est&aacute; por encima o por debajo de la industria. N&uacute;meros positivos = tarda m&aacute;s que la industria.</p>
+  <h3>Moda de Cotizaci&oacute;n: Aseguradora con Mayor Penetraci&oacute;n vs Industria</h3>
+  <p>La <strong>moda</strong> (valor m&aacute;s frecuente) compara los tiempos de la aseguradora con mayor penetraci&oacute;n en canal agente contra el promedio de la industria. N&uacute;meros positivos = tarda m&aacute;s que la industria.</p>
 
   <div class="table-wrap">
     <table>
@@ -1616,7 +1651,7 @@
         <div class="bar-row"><div class="bar-label">Seg. Atlas</div><div class="bar-track"><div class="bar-fill slate" style="width:7%"><span>7%</span></div></div></div>
       </div>
     </div>
-    <p>HDI cotiza en <strong>3.3 d&iacute;as promedio</strong> y emite en <strong>2.98 d&iacute;as</strong>. Chubb tiene el mejor promedio de cotizaci&oacute;n (1.98 d&iacute;as) y GMX el mejor de emisi&oacute;n (2.1 d&iacute;as). Rango: 0 a 10 d&iacute;as en cotizaci&oacute;n, 0.5 a 10 en emisi&oacute;n.</p>
+    <p>Rango observado: 0 a 10 d&iacute;as en cotizaci&oacute;n, 0.5 a 10 en emisi&oacute;n. La dispersi&oacute;n var&iacute;a significativamente entre aseguradoras.</p>
   </div>
 
   <!-- Empresarial -->
@@ -1627,7 +1662,7 @@
       <div class="rc-meta-item"><strong>Emisi&oacute;n</strong><span>Moda: 3 d&iacute;as | HDI: 3 d&iacute;as | Prom. gral: 3.27</span></div>
       <div class="rc-meta-item"><strong>Muestra</strong><span>40 casos (23 HDI)</span></div>
     </div>
-    <p>Participaci&oacute;n: HDI <strong>36%</strong>, AXA 18%, Mapfre 14%, Chubb 13%, Seg. Atlas 11%, GMX 8%. Tiempos crecen significativamente con el n&uacute;mero de ubicaciones: de 3.5 d&iacute;as (individual) hasta 15 d&iacute;as (>500 ubicaciones) para Chubb.</p>
+    <p>Los tiempos crecen significativamente con el n&uacute;mero de ubicaciones: de 3.5 d&iacute;as (individual) hasta 15 d&iacute;as (&gt;500 ubicaciones).</p>
   </div>
 
   <!-- Incendio -->
@@ -1638,7 +1673,7 @@
       <div class="rc-meta-item"><strong>Emisi&oacute;n</strong><span>Moda: 3 d&iacute;as | HDI: 3 d&iacute;as | Prom. gral: 2.32</span></div>
       <div class="rc-meta-item"><strong>Muestra</strong><span>40 casos (22 HDI)</span></div>
     </div>
-    <p>Participaci&oacute;n: HDI <strong>47%</strong>, AXA 24%, Seg. Atlas 14%, Chubb 7%, Mapfre 5%, GMX 3%. Los tiempos de HDI escalan dr&aacute;sticamente con ubicaciones m&uacute;ltiples: 2.8 d&iacute;as (individual) a 10.3 d&iacute;as (101&ndash;500 ubicaciones).</p>
+    <p>Los tiempos escalan dr&aacute;sticamente con ubicaciones m&uacute;ltiples: de 2.8 d&iacute;as (individual) hasta 10.3 d&iacute;as (101&ndash;500 ubicaciones).</p>
   </div>
 
   <!-- Transporte de Carga -->
@@ -1649,7 +1684,7 @@
       <div class="rc-meta-item"><strong>Emisi&oacute;n</strong><span>Moda: 1 d&iacute;a | HDI: 1 d&iacute;a | Prom. gral: 1.70</span></div>
       <div class="rc-meta-item"><strong>Muestra</strong><span>45 casos (32 HDI)</span></div>
     </div>
-    <p>Participaci&oacute;n: HDI <strong>47%</strong>, AXA 13%, Chubb 12%, Seg. Atlas 10%, Mapfre 10%, GMX 8%. HDI promedia 1.00/1.03 (cotizaci&oacute;n/emisi&oacute;n) &mdash; cercano a Chubb (0.75/0.75).</p>
+    <p>Producto con tiempos promedio m&aacute;s bajos del estudio. Varias aseguradoras logran cotizar y emitir en menos de 1.5 d&iacute;as.</p>
   </div>
 
   <!-- Equipo Electrónico -->
@@ -1660,7 +1695,7 @@
       <div class="rc-meta-item"><strong>Emisi&oacute;n</strong><span>Moda: 0 d&iacute;as | HDI: 1 d&iacute;a | Prom. gral: 2.10</span></div>
       <div class="rc-meta-item"><strong>Muestra</strong><span>41 casos (27 HDI)</span></div>
     </div>
-    <p>Participaci&oacute;n: HDI <strong>51%</strong>, AXA 22%, Chubb 14%, Mapfre 3%, GMX 1%, Seg. Atlas 8%. HDI cotiza en 2.96 d&iacute;as promedio vs Chubb 1.75. Rango de 0 a 10 d&iacute;as.</p>
+    <p>Rango de 0 a 10 d&iacute;as en cotizaci&oacute;n. La moda de 0 d&iacute;as indica que varios agentes reportan cotizaciones instant&aacute;neas para este producto.</p>
   </div>
 
   <!-- ─── Otros procesos ─── -->
@@ -1724,7 +1759,7 @@
       </tbody>
     </table>
   </div>
-  <p style="font-size:0.88rem;color:var(--graphite)"><em>Baj&iacute;o destaca como la subdirecci&oacute;n con los mejores tiempos de cotizaci&oacute;n (4 productos con el mejor tiempo) y emisi&oacute;n (4 productos). M&eacute;xico Promotor&iacute;as tiene los tiempos m&aacute;s altos en ambos procesos.</em></p>
+  <p style="font-size:0.88rem;color:var(--graphite)"><em>Los tiempos var&iacute;an significativamente por regi&oacute;n, lo que sugiere oportunidades de estandarizaci&oacute;n operativa.</em></p>
 
   <!-- ─── Canales ─── -->
   <h3>Tiempos por Canal de Cotizaci&oacute;n</h3>
@@ -1771,34 +1806,90 @@
   </div>
 
   <!-- ─── The Big Idea / Conclusiones ─── -->
-  <h3>Conclusiones y Accionables del Estudio SLA</h3>
+  <h3>Conclusiones del Estudio SLA</h3>
 
   <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
     <div class="card" style="border-left:4px solid var(--teal)">
-      <div class="card-title">Fortalezas del L&iacute;der</div>
-      <p>Los tiempos de HDI en cotizaci&oacute;n de <strong>calderas, empresas, incendios y obra civil</strong> se encuentran por debajo del promedio general de la industria. En emisi&oacute;n: equipo de contratistas, calderas, RC, incendios y obra civil.</p>
+      <div class="card-title">Velocidad vs. Relaci&oacute;n Comercial</div>
+      <p>Los datos muestran que la aseguradora m&aacute;s r&aacute;pida no es necesariamente la m&aacute;s cotizada. Los agentes valoran un conjunto de factores &mdash; velocidad, confiabilidad, relaci&oacute;n comercial y servicio post-venta &mdash; al elegir con qui&eacute;n trabajar.</p>
     </div>
     <div class="card" style="border-left:4px solid var(--amber)">
-      <div class="card-title">&Aacute;reas de Mejora</div>
-      <p>En cotizaci&oacute;n, <strong>equipo electr&oacute;nico, transporte de carga, paquete familiar y montaje</strong> exceden los promedios generales por m&aacute;s de 1 d&iacute;a. En emisi&oacute;n: transporte de carga, montaje, dinero y valores.</p>
+      <div class="card-title">Dispersi&oacute;n de Tiempos</div>
+      <p>Existe una dispersi&oacute;n amplia en tiempos de cotizaci&oacute;n y emisi&oacute;n, incluso dentro de la misma aseguradora. La <strong>estandarizaci&oacute;n</strong> &mdash; no solo la rapidez &mdash; es una oportunidad para todas las aseguradoras.</p>
     </div>
     <div class="card" style="border-left:4px solid var(--red)">
-      <div class="card-title">La Gran Brecha</div>
-      <p>En emisi&oacute;n, el agente percibe tiempos <strong>significativamente mayores</strong> a los reportados internamente por las aseguradoras. Este gap de percepci&oacute;n es el factor que m&aacute;s desfavorece frente a la competencia.</p>
+      <div class="card-title">Brecha de Percepci&oacute;n en Emisi&oacute;n</div>
+      <p>En emisi&oacute;n, los agentes perciben tiempos <strong>significativamente mayores</strong> a los reportados en sistemas internos de las aseguradoras. Este gap de percepci&oacute;n representa una oportunidad transversal de mejora.</p>
     </div>
   </div>
 
   <div class="callout">
-    <p><strong>Accionables:</strong></p>
+    <p><strong>Hallazgos clave:</strong></p>
     <ul style="margin-top:0.5rem;margin-bottom:0">
-      <li><strong>Monitorear los tiempos en las peores calificaciones</strong> &mdash; especialmente en subdirecci&oacute;n M&eacute;xico Promotor&iacute;as</li>
-      <li><strong>Incrementar las cotizaciones por canal Analista y DAN</strong> &mdash; los &uacute;nicos canales consistentemente por debajo de la expectativa del agente</li>
-      <li><strong>Mejorar penetraci&oacute;n en producto Obra Civil</strong> &mdash; es donde HDI tiene menor dominancia (42%) vs 60&ndash;88% en los dem&aacute;s productos</li>
-      <li><strong>Cerrar la brecha de percepci&oacute;n en emisi&oacute;n</strong> &mdash; el gap entre lo que reportan los sistemas internos y lo que percibe el agente es la oportunidad m&aacute;s grande de mejora en experiencia</li>
+      <li><strong>72% de las cotizaciones y 78.5% de las emisiones</strong> se concentran por debajo de 3.5 d&iacute;as &mdash; pero hay una cola larga de casos que superan los 5 d&iacute;as</li>
+      <li><strong>Los canales Analista y DAN</strong> son los &uacute;nicos consistentemente por debajo de la expectativa del agente en todos los productos</li>
+      <li><strong>La subdirecci&oacute;n Baj&iacute;o</strong> tiene los mejores tiempos regionales; M&eacute;xico Promotor&iacute;as los m&aacute;s altos</li>
+      <li><strong>La brecha percepci&oacute;n vs. sistemas internos en emisi&oacute;n</strong> llega hasta +3.5 d&iacute;as en algunos productos &mdash; cerrar este gap es la oportunidad m&aacute;s grande de mejora en experiencia del agente</li>
     </ul>
   </div>
 
   <p style="font-size:0.85rem;color:var(--graphite)"><em>Fuente: Investigaci&oacute;n de campo Aldebaran Consulting, M&eacute;xico, 2024. Muestra: 280 encuestas a agentes, 464 casos documentados. Todos los tiempos en d&iacute;as naturales.</em></p>
+</section>
+
+<!-- ════════════════════════════════════════ -->
+<!-- CONCLUSIONES Y METODOLOGÍA -->
+<!-- ════════════════════════════════════════ -->
+<section class="section" id="conclusiones">
+  <div class="part-header">
+    <div class="section-label">Cierre</div>
+    <h2>3 Decisiones Estrat&eacute;gicas para Sura</h2>
+    <p>S&iacute;ntesis final del estudio &mdash; las preguntas que la direcci&oacute;n debe responder.</p>
+  </div>
+
+  <div style="margin-top:2.75rem">
+  <div class="card" style="margin-bottom:1.5rem; border-left:4px solid var(--red); padding:2rem">
+    <div class="card-title" style="font-size:1.15rem">1. &iquest;Arreglamos la m&aacute;quina antes de crecer?</div>
+    <p>Con un IDATU de 5.68 &mdash; el m&aacute;s bajo del sector &mdash; cualquier expansi&oacute;n de portafolio se construye sobre cimientos fr&aacute;giles. Las l&iacute;neas especializadas de RC se venden por <strong>confianza y experiencia de siniestro</strong>. No se puede prometer un seguro D&amp;O o E&amp;O si la operaci&oacute;n no puede entregar la experiencia que esos productos requieren. <strong>Resolver la calidad de servicio no es un proyecto paralelo &mdash; es prerrequisito.</strong></p>
+  </div>
+
+  <div class="card" style="margin-bottom:1.5rem; border-left:4px solid var(--teal); padding:2rem">
+    <div class="card-title" style="font-size:1.15rem">2. &iquest;Competimos como generalista o como especialista PyME en RC?</div>
+    <p>Sura est&aacute; en una zona competitiva inc&oacute;moda: demasiado peque&ntilde;o para ser generalista de escala, sin canal bancario, y sin la capacidad t&eacute;cnica de un especialista corporativo. Su ventaja real es la <strong>base de clientes PyME y el canal de agentes</strong>. La oportunidad m&aacute;s clara es <strong>democratizar RC especializada (E&amp;O, D&amp;O, Cyber) para el segmento donde ya tiene posici&oacute;n</strong> &mdash; no competir con Chubb o AIG en el corporativo grande.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:1.5rem; border-left:4px solid var(--blue); padding:2rem">
+    <div class="card-title" style="font-size:1.15rem">3. &iquest;Construimos capacidades o solo lanzamos productos?</div>
+    <p>El estudio muestra consistentemente que <strong>los ganadores del sector no ganan por producto sino por capacidades</strong>: velocidad de suscripci&oacute;n, relaci&oacute;n con el canal, anal&iacute;tica de riesgo, experiencia de siniestros. Lanzar E&amp;O o D&amp;O sin underwriters especializados, sin reaseguro facultativo y sin relaci&oacute;n con brokers es lanzar un producto vac&iacute;o. <strong>La inversi&oacute;n debe ir a las capacidades que hacen viable la promesa.</strong></p>
+  </div>
+  </div>
+
+  <div class="callout" style="margin-top:1rem; border-left-color:var(--teal)">
+    <p><strong>L&iacute;nea de fondo:</strong> M&eacute;xico tiene un mercado asegurador de casi $1 bill&oacute;n de pesos que apenas asegura el 2.4% del PIB, con brechas desproporcionadas en l&iacute;neas especializadas de RC. La oportunidad existe. La pregunta para Sura no es <em>&ldquo;&iquest;hay mercado?&rdquo;</em> sino <em>&ldquo;&iquest;tenemos las capacidades para capturarlo?&rdquo;</em> &mdash; y este estudio sugiere que la respuesta es: <strong>todav&iacute;a no, pero el camino es claro.</strong></p>
+  </div>
+
+  <h3 style="margin-top:3rem">Metodolog&iacute;a y Fuentes</h3>
+  <div class="two-col">
+    <div>
+      <h4>Alcance</h4>
+      <ul>
+        <li>5 ramos principales: GMM, Autos, Vida, Da&ntilde;os, RC</li>
+        <li>9 subramos de Responsabilidad Civil</li>
+        <li>72+ fuentes documentadas</li>
+        <li>Per&iacute;odo de datos: 2018&ndash;2025</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Fuentes principales</h4>
+      <ul>
+        <li><strong>CNSF</strong> &mdash; Estad&iacute;sticas oficiales y anuarios (1T&ndash;4T 2024)</li>
+        <li><strong>AMIS</strong> &mdash; Reportes sectoriales</li>
+        <li><strong>CONDUSEF / IDATU</strong> &mdash; Calidad de servicio (3T 2025)</li>
+        <li><strong>Estudio cuantitativo SLA</strong> &mdash; 280 agentes, 464 casos (Oct 2024)</li>
+        <li>P&aacute;ginas de producto de aseguradoras, calificadoras (AM Best, Fitch), Swiss Re, Munich Re</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:0.85rem;color:var(--graphite);margin-top:1rem"><em>Las estimaciones de tama&ntilde;o de mercado en subramos de RC son aproximaciones basadas en m&uacute;ltiples fuentes y triangulaci&oacute;n de datos, ya que la CNSF no publica desgloses a nivel de subramo. Los datos de penetraci&oacute;n son estimaciones del equipo de an&aacute;lisis.</em></p>
 </section>
 
 </div>
