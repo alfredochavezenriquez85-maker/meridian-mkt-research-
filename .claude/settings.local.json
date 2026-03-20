@@ -17,7 +17,8 @@
       "WebFetch(domain:qinversionistas.qualitas.com.mx)",
       "WebFetch(domain:www.gnp.com.mx)",
       "Bash(git init:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "WebFetch(domain:alfredochavezenriquez85-maker.github.io)"
     ]
   }
 }
