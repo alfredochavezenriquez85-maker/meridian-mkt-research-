@@ -1,6 +1,6 @@
 # Resumen Ejecutivo
 ## Estudio de Mercado — Sector Asegurador México 2024–2025
-### Meridian Consulting — Market Intelligence
+### Aldebaran Consulting — Market Intelligence
 
 **Fecha:** Marzo 2026 | **Cliente:** Liderazgo de Operaciones — LCG | **Versión:** 1.0
 
@@ -92,4 +92,4 @@ Sura opera en México desde 2016 con fortaleza en PyMEs y paquetes multirriesgo.
 
 **Documentación completa:** `outputs/estudio-mercado-completo.md` | **58+ fuentes** documentadas en `referencias/fuentes.md`
 
-**Meridian Consulting — Market Intelligence** | Marzo 2026
+**Aldebaran Consulting — Market Intelligence** | Marzo 2026

@@ -1,5 +1,5 @@
 # Estudio de Mercado — Sector Asegurador México
-## Meridian Consulting — Market Intelligence
+## Aldebaran Consulting — Market Intelligence
 
 **Fecha:** Marzo 2026
 **Cliente interno:** Liderazgo de Operaciones — LCG
@@ -363,5 +363,5 @@ Al primer trimestre de 2024 (último ranking público disponible con detalle ind
 
 ---
 
-**Meridian Consulting — Market Intelligence**
+**Aldebaran Consulting — Market Intelligence**
 **Versión:** 1.0 | **Fecha:** Marzo 2026 | **Fuentes:** 58+ documentadas en `referencias/fuentes.md`
